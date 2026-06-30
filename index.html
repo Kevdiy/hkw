@@ -8,14 +8,12 @@
 </head>
 <body>
 <div class="container">
-    <header>
+<header class="weather-header">
         <div class="title-area">
-            <!-- Added id for Title -->
             <h1 id="main-title">Hong Kong Weather Hub</h1>
-            <p id="sync-time">Connecting to data.gov.hk feeds...</p>
         </div>
-        <div class="controls">
-            <span class="mode-status" id="mode-label">Syncing...</span>
+        
+        <div class="header-controls">
             <div class="mode-icon" id="mode-visual-icon"></div>
             <div class="theme-switch-wrapper">
                 <label class="switch">
@@ -23,18 +21,13 @@
                     <span class="slider"></span>
                 </label>
             </div>
-            <!-- Language Switcher Section -->
-            <div class="lang-switch-wrapper">
-                <button id="lang-toggle" class="lang-btn">
-                    <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
-                    <span id="lang-text">繁中</span>
-                </button>
-            </div>
+
+            <button id="lang-toggle" class="lang-btn">
+                <span id="lang-text">繁中</span>
+            </button>
         </div>
+
+        <p id="sync-time" class="sync-status">Connecting to data.gov.hk feeds...</p>
     </header>
 
     <div class="dashboard-grid">
