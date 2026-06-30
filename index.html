@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="container">
     <header>
         <div class="title-area">
-            <h1>Hong Kong Weather Hub</h1>
+            <!-- Added id for Title -->
+            <h1 id="main-title">Hong Kong Weather Hub</h1>
             <p id="sync-time">Connecting to data.gov.hk feeds...</p>
         </div>
         <div class="controls">
@@ -22,6 +22,17 @@
                     <input type="checkbox" id="theme-toggle">
                     <span class="slider"></span>
                 </label>
+            </div>
+            <!-- Language Switcher Section -->
+            <div class="lang-switch-wrapper">
+                <button id="lang-toggle" class="lang-btn">
+                    <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <span id="lang-text">繁中</span>
+                </button>
             </div>
         </div>
     </header>
@@ -45,34 +56,34 @@
                 <div class="meta-item">
                     <span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="var(--icon-rain)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
-                        Humidity
+                        <span id="lbl-humidity">Humidity</span>
                     </span>
                     <strong id="cur-rh">--</strong>
                 </div>
                 <div class="meta-item">
                     <span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="var(--icon-sun)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                        UV Index
+                        <span id="lbl-uv">UV Index</span>
                     </span>
                     <strong id="cur-uv">--</strong>
                 </div>
 
                 <div class="meta-item">
                     <span>
-                           <svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet">
-                            <path fill="#66757F" d="M9 28.5a1.5 1.5 0 0 1 3 0v.5s0 3 3 3s3-3 3-3V3.5a1.5 1.5 0 1 1 3 0V29s0 6-6 6s-6-6-6-6v-.5z"></path>
-                            <path fill="#744EAA" d="M19.5 4C28.612 4 36 9.82 36 17c0 0 0 2-1 2s-3-2-3-2H7s-2 2-3 2s-1-2-1-2C3 9.82 10.387 4 19.5 4z"></path>
-                            <path fill="#9266CC" d="M19.5 4C26.403 4 32 9.82 32 17c0 0 0 2-2 2s-5-2-5-2H14s-3 2-5 2s-2-2-2-2C7 9.82 12.596 4 19.5 4z"></path>
-                            <path fill="#744EAA" d="M19.5 4C23.09 4 25 9.82 25 17c0 0-3 2-5 2h-1c-2 0-5-2-5-2c0-7.18 1.91-13 5.5-13z"></path>
-                            </svg>
-                        Rain Chance
+                       <svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet">
+                        <path fill="#66757F" d="M9 28.5a1.5 1.5 0 0 1 3 0v.5s0 3 3 3s3-3 3-3V3.5a1.5 1.5 0 1 1 3 0V29s0 6-6 6s-6-6-6-6v-.5z"></path>
+                        <path fill="#744EAA" d="M19.5 4C28.612 4 36 9.82 36 17c0 0 0 2-1 2s-3-2-3-2H7s-2 2-3 2s-1-2-1-2C3 9.82 10.387 4 19.5 4z"></path>
+                        <path fill="#9266CC" d="M19.5 4C26.403 4 32 9.82 32 17c0 0 0 2-2 2s-5-2-5-2H14s-3 2-5 2s-2-2-2-2C7 9.82 12.596 4 19.5 4z"></path>
+                        <path fill="#744EAA" d="M19.5 4C23.09 4 25 9.82 25 17c0 0-3 2-5 2h-1c-2 0-5-2-5-2c0-7.18 1.91-13 5.5-13z"></path>
+                        </svg>
+                        <span id="lbl-psr">Rain Chance</span>
                     </span>
                     <strong id="cur-psr">--</strong>
                 </div>
                 <div class="meta-item">
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" xml:space="preserve"><ellipse transform="rotate(37 22.17 25.329)" style="fill:#bdd7e5" cx="22.17" cy="25.329" rx="4" ry="12"/><path style="fill:#abcadd" d="M15.947 36.213c-.62 0-1.158-.169-1.6-.501-2.621-1.977-.057-8.233 3.83-13.392 3.55-4.71 7.655-7.875 10.218-7.875.619 0 1.157.169 1.599.501 2.622 1.977.059 8.232-3.829 13.392-3.551 4.711-7.657 7.875-10.218 7.875m12.448-19.768c-1.594 0-5.156 2.48-8.62 7.078-4.283 5.685-5.037 9.979-4.224 10.591q.13.098.396.099c1.593 0 5.155-2.48 8.62-7.078 4.283-5.685 5.036-9.979 4.224-10.591q-.132-.098-.396-.099"/><path style="fill:#e4eff7" d="m55.933 42.006-26.54-26.26c1.764 1.33-.039 6.698-4.027 11.991s-8.652 8.506-10.416 7.176l32.559 18.274c1.323.997 3.617.185 6.609-3.785 2.989-3.97 3.138-6.399 1.815-7.396"/><path style="fill:#abcadd" d="M48.688 54.574c-.63 0-1.224-.188-1.723-.545L14.829 35.993a2.4 2.4 0 0 1-.482-.281l1.091-1.671.249.14a1 1 0 0 0 .26.032c1.593 0 5.155-2.48 8.62-7.078 3.898-5.174 5.02-9.431 4.327-10.477l-.205-.202 1.305-1.51q.223.169.404.387l26.196 25.92c.585.466 1.433 1.516 1.029 3.532-.294 1.468-1.205 3.224-2.709 5.218-2.285 3.033-4.381 4.571-6.226 4.571m-30.47-18.972 29.891 16.786a.92.92 0 0 0 .579.187c.537 0 2.063-.368 4.629-3.774 1.646-2.184 2.185-3.602 2.346-4.407.154-.771.043-1.307-.331-1.588l-.102-.088-24.269-24.013c-.473 2.852-2.495 6.578-4.797 9.633-2.628 3.487-5.561 6.127-7.946 7.264"/><path style="fill:#abcadd" d="M7.272 15h22v2h-22z"/><path style="fill:#e64c3c" d="M48.526 45.188c1.414-1.876 2.601-3.843 3.46-5.681L50.463 38c-.802 1.889-2.026 3.983-3.535 5.985-1.507 2-3.182 3.771-4.771 5.06l1.861 1.045c1.528-1.33 3.093-3.024 4.508-4.902m-4.792-3.61c1.64-2.175 2.955-4.416 3.815-6.461l-1.546-1.53c-.759 2.061-2.139 4.496-3.866 6.788-1.728 2.293-3.69 4.293-5.464 5.59l1.896 1.065c1.731-1.391 3.524-3.275 5.165-5.452m-4.792-3.611c1.864-2.474 3.309-5.036 4.134-7.276l-1.584-1.568c-.651 2.205-2.164 5.008-4.147 7.64-1.984 2.633-4.264 4.862-6.205 6.094l1.944 1.092c1.925-1.41 3.992-3.506 5.858-5.982"/><path transform="rotate(67.163 11.271 25.501)" style="fill:#abcadd" d="M.964 24.5H21.58v2H.964z"/><path style="fill:none;stroke:#7f8c8d;stroke-width:2;stroke-miterlimit:10" d="M7.272 49V9"/><circle style="fill:#bdc3c7;stroke:#95a5a5;stroke-width:2;stroke-miterlimit:10" cx="7.272" cy="5" r="4"/><path style="fill:#bdc3c7;stroke:#7f8c8d;stroke-width:2;stroke-miterlimit:10" d="M5.272 49h4v6h-4zm-2 6h8v4h-8z"/></svg>
-                        Wind
+                        <span id="lbl-wind">Wind</span>
                     </span>
                     <strong id="cur-wind" style="font-size: 25px; padding-left: 42px; line-height: 1.2;">--</strong>
                 </div>
@@ -84,9 +95,10 @@
         </section>
 
         <section class="card forecast-section">
-            <h2>5-Days Weather Forecast</h2>
+            <!-- Added id for Forecast header -->
+            <h2 id="forecast-title">5-Days Weather Forecast</h2>
             <div class="forecast-grid" id="forecast-container">
-                <div style="grid-column: span 5; text-align: center; color: var(--text-muted); padding: 40px 0;">
+                <div id="forecast-loading" style="grid-column: span 5; text-align: center; color: var(--text-muted); padding: 40px 0;">
                     Parsing upcoming structural trends...
                 </div>
             </div>
@@ -94,325 +106,5 @@
     </div>
 </div>
 <script src="script.js"></script>
-<script>
-    const toggle = document.getElementById('theme-toggle');
-    const modeLabel = document.getElementById('mode-label');
-    const modeVisualIcon = document.getElementById('mode-visual-icon');
-    let isUserOverridden = false;
-
-    const DAWN_HOUR = 6;
-    const DUSK_HOUR = 18;
-
-    const HEADER_SVGS = {
-        sun: `<svg viewBox="0 0 24 24" fill="none" stroke="var(--icon-sun)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`,
-        moon: `<svg viewBox="0 0 24 24" fill="none" stroke="var(--icon-moon)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`
-    };
-
-    //const SVG_LIBRARY in script.js
-
-    function getWeatherIcon(iconId, isForecastCard = false) {
-        const id = parseInt(iconId, 10);
-        
-        if ([50].includes(id)) return SVG_LIBRARY.sunny;                   
-        if ([51].includes(id)) return SVG_LIBRARY.partlyCloudy;                   
-        if ([52].includes(id)) return SVG_LIBRARY.partlyCloudy2;                  
-        if ([53].includes(id)) return SVG_LIBRARY.shower1;                     
-        if ([54].includes(id)) return SVG_LIBRARY.shower2;                     
-        if ([70, 71, 72, 73, 74, 75, 77].includes(id)) return SVG_LIBRARY.moon;    
-        if ([60, 61, 76].includes(id)) return SVG_LIBRARY.cloudy;             
-        if ([62, 63, 64].includes(id)) return SVG_LIBRARY.rain;               
-        if ([65].includes(id)) return SVG_LIBRARY.thunderstorm;               
-        if ([80].includes(id)) return SVG_LIBRARY.windy;
-        if ([81].includes(id)) return SVG_LIBRARY.dry;
-        if ([82].includes(id)) return SVG_LIBRARY.humid;
-        if ([83,84,85].includes(id)) return SVG_LIBRARY.fog;
-        if ([90, 91].includes(id)) return SVG_LIBRARY.hot;
-        if ([92, 93].includes(id)) return SVG_LIBRARY.cold;
-        return SVG_LIBRARY.error; 
-    }
-
-    function getBriefForecastDescription(iconId) {
-        const id = parseInt(iconId, 10);
-        if ([50].includes(id))  return "Sunny & Fine";
-        if ([51,52].includes(id))  return "Sunny Intervals";
-        if ([53, 54].includes(id)) return "Sunny Shower";
-        if ([60, 61, 76].includes(id)) return "Cloudy";
-        if (id === 62) return "Light Rain";
-        if ([63].includes(id)) return "Rain";
-        if ([64].includes(id)) return "Heavy Rain";
-        if ([65].includes(id)) return "Thunderstorms";
-        if ([70, 71, 72, 73, 74, 75, 77].includes(id)) return "Fine";
-        if ([80].includes(id)) return "Windy";
-        if ([81].includes(id)) return "Dry";
-        if ([82].includes(id)) return "Humid";
-        if ([83,84,85].includes(id)) return "Mist";
-        if ([90, 91].includes(id)) return "Hot";
-        if ([92, 93].includes(id)) return "Cold";
-        
-        return "Not available";
-    }
-
-    function evaluateSolarSystemTheme() {
-        if (isUserOverridden) return;
-        const currentHour = new Date().getHours();
-        const isDaytime = currentHour >= DAWN_HOUR && currentHour < DUSK_HOUR;
-
-        if (isDaytime) {
-            document.documentElement.removeAttribute('data-theme');
-            toggle.checked = false;
-            modeLabel.textContent = "Auto";
-            modeVisualIcon.innerHTML = HEADER_SVGS.sun;
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            toggle.checked = true;
-            modeLabel.textContent = "Auto";
-            modeVisualIcon.innerHTML = HEADER_SVGS.moon;
-        }
-    }
-
-    toggle.addEventListener('change', (e) => {
-        isUserOverridden = true;
-        if (e.target.checked) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            modeLabel.textContent = "Manual";
-            modeVisualIcon.innerHTML = HEADER_SVGS.moon;
-        } else {
-            document.documentElement.removeAttribute('data-theme');
-            modeLabel.textContent = "Manual";
-            modeVisualIcon.innerHTML = HEADER_SVGS.sun;
-        }
-    });
-
-    evaluateSolarSystemTheme();
-    setInterval(evaluateSolarSystemTheme, 60000);
-
-    async function liveSyncWeatherEngine() {
-        const syncLabel = document.getElementById('sync-time');
-        try {
-            const [currentResponse, forecastResponse] = await Promise.all([
-                fetch('https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en'),
-                fetch('https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en')
-            ]);
-
-            if (!currentResponse.ok || !forecastResponse.ok) throw new Error("API Node Error");
-
-            const currentPayload = await currentResponse.json();
-            const forecastPayload = await forecastResponse.json();
-
-            processCurrentState(currentPayload, forecastPayload);
-            processForecastState(forecastPayload);
-            
-            syncLabel.textContent = `Live connection active • Refreshed at ${new Date().toLocaleTimeString()}`;
-        } catch (error) {
-            console.warn("CORS/Network error detected. Injecting robust mock data fallback for local testing.");
-            injectMockTestingEnvironment();
-        }
-     
-
-    }
-
-    function injectMockTestingEnvironment() {
-        const syncLabel = document.getElementById('sync-time');
-        
-        const mockCurrent = {
-            temperature: { data: [{ value: 29 }] },
-            humidity: { data: [{ value: 78 }] },
-            icon: [60], 
-            weatherDescription: ["Normal weather structures parsed."],
-            uvindex: { data: [{ value: 8 }] }
-        };
-
-        const mockForecast = {
-            weatherForecast: [
-                { forecastDate: "20260630", week: "Tuesday", forecastMintemp: {value: 28}, forecastMaxtemp: {value: 33}, forecastMinrh: {value: 75}, forecastMaxrh: {value: 90}, ForecastIcon: 51, PSR: "Low", forecastWind: "East to southeasterly winds force 4 to 5." }, 
-                { forecastDate: "20260701", week: "Wednesday", forecastMintemp: {value: 27}, forecastMaxtemp: {value: 32}, forecastMinrh: {value: 80}, forecastMaxrh: {value: 95}, ForecastIcon: 60, PSR: "Medium Low", forecastWind: "South winds force 4." }, 
-                { forecastDate: "20260702", week: "Thursday", forecastMintemp: {value: 27}, forecastMaxtemp: {value: 32}, forecastMinrh: {value: 75}, forecastMaxrh: {value: 90}, ForecastIcon: 63, PSR: "High", forecastWind: "South to southwesterly winds force 3 to 4." }, 
-                { forecastDate: "20260703", week: "Friday", forecastMintemp: {value: 28}, forecastMaxtemp: {value: 33}, forecastMinrh: {value: 70}, forecastMaxrh: {value: 85}, ForecastIcon: 73, PSR: "Medium", forecastWind: "Variable winds force 2 to 3." }, 
-                { forecastDate: "20260704", week: "Saturday", forecastMintemp: {value: 28}, forecastMaxtemp: {value: 34}, forecastMinrh: {value: 65}, forecastMaxrh: {value: 80}, ForecastIcon: 75, PSR: "Low", forecastWind: "East winds force 4." } 
-            ]
-        };
-
-        processCurrentState(mockCurrent, mockForecast);
-        processForecastState(mockForecast);
-        syncLabel.textContent = `Mock Testing Environment Active (Data is simulated to bypass CORS locally)`;
-    }
-
-    function processCurrentState(currentData, forecastData) {
-        const tempValue = currentData.temperature?.data?.[0]?.value ?? "--";
-        const humidityValue = currentData.humidity?.data?.[0]?.value ?? "--";
-        const iconId = currentData.icon?.[0] ?? 50;
-        const descRow = document.getElementById('desc-row-container');
-        const descField = document.getElementById('cur-desc');
-        const statusField = document.getElementById('cur-icon-status');
-        
-        // FIX 1: Map dynamic API icon to status field 
-        statusField.textContent = getBriefForecastDescription(iconId);
-
-        let skiesSummary = "Fine";
-        if (currentData.weatherDescription) {
-            skiesSummary = Array.isArray(currentData.weatherDescription) ? currentData.weatherDescription[0] : currentData.weatherDescription;
-        }
-
-        const isWarningActive = currentData.warningMessage && Array.isArray(currentData.warningMessage) && currentData.warningMessage.length > 0;
-        const lowercaseDesc = skiesSummary.toLowerCase();
-        const isNormalText = lowercaseDesc.includes("normal") || lowercaseDesc.includes("observatory reports normal");
-
-        if (isWarningActive) {
-            descRow.style.display = 'block';
-            descField.innerHTML = `<strong>⚠️ Active Warning:</strong> ${currentData.warningMessage.join(" | ")}`;
-            descField.style.color = "var(--warning-red)";
-        } else if (isNormalText) {
-            descRow.style.display = 'none';
-        } else {
-            descRow.style.display = 'block';
-            descField.textContent = skiesSummary;
-            descField.style.color = "var(--text-muted)";
-        }
-
-        let uvValue = "0";
-        if (currentData.uvindex && currentData.uvindex.data && currentData.uvindex.data.length > 0) {
-            uvValue = currentData.uvindex.data[0].value;
-        }
-
-        let currentPsrValue = "Low";
-        if (forecastData && forecastData.weatherForecast && forecastData.weatherForecast.length > 0) {
-            currentPsrValue = forecastData.weatherForecast[0].PSR ?? "Low";
-        }
-
-        // FIX 2: Dynamic wind retrieval using today's forecastWind
-        let windDirection = "--";
-        let windSpeed = "--";
-        
-        if (forecastData?.weatherForecast?.[0]?.forecastWind) {
-            const windRaw = forecastData.weatherForecast[0].forecastWind;
-            const windLower = windRaw.toLowerCase();
-            
-            // Regex to grab force (e.g., "force 4 to 5")
-            const forceMatch = windLower.match(/force\s+([0-9\sato]+)/);
-            windSpeed = forceMatch ? `Force ${forceMatch[1].replace(' to ', '-')}` : "N/A";
-
-            // Regex to grab direction (e.g., "East to southeasterly")
-            const dirMatch = windLower.match(/^(.*?)\s+winds/);
-            if (dirMatch) {
-                windDirection = dirMatch[1]
-                    .replace(/north/g, 'N')
-                    .replace(/south/g, 'S')
-                    .replace(/east/g, 'E')
-                    .replace(/west/g, 'W')
-                    .replace(/erly/g, '')
-                    .replace(/ern/g, '')
-                    .replace(/\s+to\s+/g, '-');
-                windDirection = windDirection.toUpperCase();
-            } else {
-                windDirection = "Wind";
-            }
-        }
-
-        document.getElementById('cur-temp').textContent = tempValue;
-        document.getElementById('cur-rh').textContent = humidityValue !== "--" ? `${humidityValue}%` : "--";
-        document.getElementById('cur-uv').textContent = uvValue;
-        document.getElementById('cur-psr').textContent = currentPsrValue;
-        
-        // Print the calculated wind values
-        //document.getElementById('cur-wind').innerHTML = `${windDirection}<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 600;">${windSpeed}</span>`;
-        document.getElementById('cur-icon-container').innerHTML = getWeatherIcon(iconId, false);
-    }
-
-    function processForecastState(data) {
-        const container = document.getElementById('forecast-container');
-        container.innerHTML = '';
-
-        if (!data.weatherForecast) return;
-
-        const targetedForecastSet = data.weatherForecast.slice(0, 5);
-
-        targetedForecastSet.forEach(day => {
-            const rawDate = day.forecastDate; 
-            const year = parseInt(rawDate.substring(0, 4), 10);
-            const month = parseInt(rawDate.substring(4, 6), 10) - 1; 
-            const dateNum = parseInt(rawDate.substring(6, 8), 10);
-            const parsedDateObj = new Date(year, month, dateNum);
-            
-            const displayDate = parsedDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-            const displayDayName = day.week ?? parsedDateObj.toLocaleDateString('en-US', { weekday: 'long' });
-
-            const minTemp = day.forecastMintemp?.value ?? "--";
-            const maxTemp = day.forecastMaxtemp?.value ?? "--";
-            const minRh = day.forecastMinrh?.value ?? "--";
-            const maxRh = day.forecastMaxrh?.value ?? "--";
-            const forecastIconId = day.ForecastIcon ?? 50;
-            const psrValue = day.PSR ?? "Low";
-            
-            const briefForecastText = getBriefForecastDescription(forecastIconId);
-
-            const forecastCard = document.createElement('div');
-            forecastCard.className = 'forecast-card';
-            forecastCard.innerHTML = `
-                <div class="forecast-date">${displayDate}</div>
-                <div class="forecast-day">${displayDayName.substring(0,3)}</div>
-                ${getWeatherIcon(forecastIconId, true)}
-                <div class="forecast-desc">${briefForecastText}</div>
-                <div class="forecast-temp">${minTemp}°-${maxTemp}°C</div>
-                <div class="forecast-rh">RH: ${minRh}-${maxRh}%</div>
-                <div class="forecast-psr">Rain: ${psrValue}</div>
-            `;
-            container.appendChild(forecastCard);
-        });
-    }
-
-    async function updateWeatherDisplay() {
-    const url = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en';
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        // 1. Get raw string
-        const rawWindString = data.weatherForecast[0].forecastWind;
-
-        // 2. Parse using the refined logic
-        const windInfo = parseWindString(rawWindString);
-
-        // 3. Destructure into variables
-        const windDirection = windInfo.direction;
-        const windSpeed = windInfo.speed;
-
-        // 4. Update the DOM
-        // Make sure an element with id="cur-wind" exists in your HTML
-        const windElement = document.getElementById('cur-wind');
-        if (windElement) {
-            windElement.innerHTML = `${windDirection}<br><span style="font-size: 15px; color: var(--text-muted); font-weight: 600;">${windSpeed}</span>`;
-        }
-
-    } catch (error) {
-        console.error("Error updating wind display:", error);
-    }
-    }
-
-    function parseWindString(str) {
-        const match = str.match(/(.*) force ([\d ]+to[\d ]+)/i);
-        if (!match) return { direction: "N/A", speed: "N/A" };
-
-        const directionRaw = match[1].trim();
-        const speed = match[2].trim();
-
-        const dirMap = {
-            "North": "N", "South": "S", "East": "E", "West": "W",
-            "Northeast": "NE", "Northwest": "NW", "Southeast": "SE", "Southwest": "SW"
-        };
-
-        const direction = directionRaw.split(" to ").map(part => {
-            const capitalized = part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
-            return dirMap[capitalized] || part;
-        }).join(" to ");
-
-        return { direction, speed };
-    }
-
-    liveSyncWeatherEngine();
-    updateWeatherDisplay();
-    
-</script>
-
 </body>
 </html>
