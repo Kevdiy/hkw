@@ -30,6 +30,7 @@
         <p id="sync-time" class="sync-status">Connecting to data.gov.hk feeds...</p>
     </header>
 
+    <div id="warning-insertion-point" style="display: none;"></div>
     <div class="dashboard-grid">
         <section class="card current-weather">
             <div class="weather-split-layout">
@@ -41,8 +42,9 @@
                 </div>
                 <div class="icon-column">
                     <div class="main-icon-wrapper" id="cur-icon-container"></div>
-                    <div class="icon-caption" id="cur-icon-status">--</div>
                 </div>
+
+                <div id="warning-insertion-point" style="width: 100%; display: none;"></div>
             </div>
 
             <div class="weather-meta">

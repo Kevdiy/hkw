@@ -1,81 +1,88 @@
 const SVG_LIBRARY = {
-    sunny: `<svg width="800px" height="800px" viewBox="0 0 36 36"  aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"></path><circle fill="#FFAC33" cx="18" cy="18" r="10"></circle></svg>`,
-    moon:`<svg width="800px" height="800px" viewBox="0 0 36 36"  aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"></path><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"></path></svg>`,
-    cloudy: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#CCD6DD" d="M27 8a6.98 6.98 0 0 0-2.015.298c.005-.1.015-.197.015-.298a5.998 5.998 0 0 0-11.785-1.573A5.974 5.974 0 0 0 11 6a6 6 0 1 0 0 12a5.998 5.998 0 0 0 5.785-4.428A5.975 5.975 0 0 0 19 14c.375 0 .74-.039 1.096-.104c-.058.36-.096.727-.096 1.104c0 3.865 3.135 7 7 7s7-3.135 7-7a7 7 0 0 0-7-7z"></path><path fill="#E1E8ED" d="M31 22c-.467 0-.91.085-1.339.204c.216-.526.339-1.1.339-1.704a4.5 4.5 0 0 0-4.5-4.5a4.459 4.459 0 0 0-2.701.921A6.497 6.497 0 0 0 16.5 12a6.497 6.497 0 0 0-6.131 4.357A8 8 0 1 0 8 32h23c2.762 0 5-2.238 5-5s-2.238-5-5-5z"></path></svg>`,
-    partlyCloudy: `<svg width="800px" height="800px" viewBox="0 0 36 36"  aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M14 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm16 12s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 14s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm3.872-7.957s1.414 1.414 0 2.828s-2.828 0-2.828 0L3.629 7.458s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm19.085 2.828s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414z"></path><circle fill="#FFAC33" cx="16" cy="16" r="9"></circle><path fill="#E1E8ED" d="M28 20c-.825 0-1.62.125-2.369.357A6.498 6.498 0 0 0 19.5 16c-3.044 0-5.592 2.096-6.299 4.921A4.459 4.459 0 0 0 10.5 20A4.5 4.5 0 0 0 6 24.5c0 .604.123 1.178.339 1.704A4.98 4.98 0 0 0 5 26c-2.762 0-5 2.238-5 5s2.238 5 5 5h23a8 8 0 1 0 0-16z"></path></svg>`,
-    partlyCloudy2: `<svg width="800px" height="800px" viewBox="0 0 36 36"  aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M13 6s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V6zM4 17s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm3.872-6.957s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.415-1.414s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.415zm17.085 2.828s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414z"></path><circle fill="#FFAC33" cx="15" cy="19" r="8"></circle><path fill="#E1E8ED" d="M28.223 16.8c-.803 0-1.575.119-2.304.34c-.862-2.409-3.201-4.14-5.961-4.14c-2.959 0-5.437 1.991-6.123 4.675a4.399 4.399 0 0 0-2.626-.875c-2.417 0-4.375 1.914-4.375 4.275c0 .573.12 1.118.329 1.618a4.949 4.949 0 0 0-1.302-.193C3.176 22.5 1 24.626 1 27.25S3.176 32 5.861 32h22.361C32.518 32 36 28.598 36 24.4s-3.482-7.6-7.777-7.6z"></path></svg>`,
-    shower1:`<svg  width="800" height="800" viewBox="0 0 36 36"><path style="stroke:#fff;stroke-opacity:0;fill:#ffac33" d="M13 2s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2zM4 13s2 0 2 2-2 2-2 2H2s-2 0-2-2 2-2 2-2zm3.872-6.957s1.414 1.414 0 2.828-2.828 0-2.828 0L3.629 7.458s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0zm17.085 2.828s-1.414 1.414-2.828 0 0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0 0 2.828 0 2.828z"/><circle style="stroke:#fff;stroke-opacity:0;fill:#ffac33" cx="15.1" cy="15" r="8"/><path style="stroke:#fff;stroke-opacity:0;fill:#ffac33;fill-rule:evenodd" d="M3.537 25.36c1.414 1.414 2.828 0 2.828 0l1.414-1.414s1.414-1.414 0-2.828-2.828 0-2.828 0l-1.414 1.414s-1.414 1.414 0 2.828Zm26.288-10.535c0-2-2-2-2-2h-2s-2 0-2 2 2 2 2 2h2s2 0 2-2Z"/><path style="stroke:#fff;stroke-opacity:0;fill:#e1e8ed" d="M29.135 16.112a7 7 0 0 0-2.05.303c-.768-2.144-2.85-3.685-5.305-3.685-2.633 0-4.838 1.772-5.449 4.16a3.9 3.9 0 0 0-2.337-.778c-2.15 0-3.893 1.703-3.893 3.804 0 .51.107.996.293 1.44a4.4 4.4 0 0 0-1.159-.172c-2.39 0-4.325 1.892-4.325 4.227s1.936 4.227 4.325 4.227h19.899c3.823 0 6.921-3.027 6.921-6.763s-3.098-6.763-6.92-6.763Z"/><path style="stroke:#fff;stroke-opacity:0;fill:#5dadec" d="m14.784 33.675-.085-2.594-2.175 1.295c-.5.268-.805.797-.786 1.364.033.84.733 1.5 1.574 1.481a1.497 1.497 0 0 0 1.472-1.546Zm-5.29-1.167-.087-2.594-2.176 1.295c-.5.268-.805.796-.785 1.364a1.54 1.54 0 0 0 1.574 1.48 1.497 1.497 0 0 0 1.473-1.545Zm10.613.409-.085-2.594-2.175 1.295c-.5.268-.805.797-.786 1.364.033.84.733 1.5 1.574 1.48a1.496 1.496 0 0 0 1.472-1.545Zm4.533.758-.086-2.594-2.175 1.295c-.5.268-.805.797-.785 1.364.033.84.733 1.5 1.574 1.481a1.496 1.496 0 0 0 1.472-1.546Zm4.565-1.167-.087-2.594-2.175 1.295c-.5.268-.805.797-.785 1.364.033.84.733 1.5 1.574 1.48a1.497 1.497 0 0 0 1.473-1.545Z"/></svg>`,
-    shower2: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M13 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zM4 13s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm3.872-6.957s1.414 1.414 0 2.828s-2.828 0-2.828 0L3.629 7.458s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm17.085 2.828s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414z"></path><circle fill="#FFAC33" cx="15" cy="15" r="8"></circle><path fill="#E1E8ED" d="M28.223 12.8c-.803 0-1.575.119-2.304.34C25.057 10.731 22.718 9 19.958 9c-2.959 0-5.437 1.991-6.123 4.675a4.399 4.399 0 0 0-2.626-.875c-2.417 0-4.375 1.914-4.375 4.275c0 .573.12 1.119.329 1.619a4.949 4.949 0 0 0-1.302-.194C3.176 18.5 1 20.626 1 23.25S3.176 28 5.861 28h22.361C32.518 28 36 24.598 36 20.4s-3.482-7.6-7.777-7.6z"></path><path fill="#5DADEC" d="M11.999 33.961l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 10.057 36a1.974 1.974 0 0 0 1.942-2.039zm-6.979-1.54L4.906 29l-2.869 1.708a1.963 1.963 0 0 0-1.036 1.799a2.033 2.033 0 0 0 2.076 1.953a1.974 1.974 0 0 0 1.943-2.039zm14 .54l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 17.078 35a1.974 1.974 0 0 0 1.942-2.039zm5.978 1l-.113-3.421l-2.869 1.708a1.962 1.962 0 0 0-1.035 1.799A2.033 2.033 0 0 0 23.057 36a1.973 1.973 0 0 0 1.941-2.039zm6.021-1.54L30.905 29l-2.869 1.708a1.962 1.962 0 0 0-1.035 1.799a2.032 2.032 0 0 0 2.076 1.953a1.974 1.974 0 0 0 1.942-2.039z"></path></svg>`,
+    sunny: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"></path><circle fill="#FFAC33" cx="18" cy="18" r="10"></circle></svg>`,
+    moon: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"></path><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"></path></svg>`,
+    cloudy: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#CCD6DD" d="M27 8a6.98 6.98 0 0 0-2.015.298c.005-.1.015-.197.015-.298a5.998 5.998 0 0 0-11.785-1.573A5.998 5.998 0 0 0 11 6a6 6 0 1 0 0 12a5.998 5.998 0 0 0 5.785-4.428A5.975 5.975 0 0 0 19 14c.375 0 .74-.039 1.096-.104c-.058.36-.096.727-.096 1.104c0 3.865 3.135 7 7 7s7-3.135 7-7a7 7 0 0 0-7-7z"></path><path fill="#E1E8ED" d="M31 22c-.467 0-.91.085-1.339.204c.216-.526.339-1.1.339-1.704a4.5 4.5 0 0 0-4.5-4.5a4.459 4.459 0 0 0-2.701.921A6.497 6.497 0 0 0 16.5 12a6.497 6.497 0 0 0-6.131 4.357A8 8 0 1 0 8 32h23c2.762 0 5-2.238 5-5s-2.238-5-5-5z"></path></svg>`,
+    partlyCloudy: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M14 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm16 12s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 14s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm3.872-7.957s1.414 1.414 0 2.828s-2.828 0-2.828 0L3.629 7.458s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm19.085 2.828s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414z"></path><circle fill="#FFAC33" cx="16" cy="16" r="9"></circle><path fill="#E1E8ED" d="M28 20c-.825 0-1.62.125-2.369.357A6.498 6.498 0 0 0 19.5 16c-3.044 0-5.592 2.096-6.299 4.921A4.459 4.459 0 0 0 10.5 20A4.5 4.5 0 0 0 6 24.5c0 .604.123 1.178.339 1.704A4.98 4.98 0 0 0 5 26c-2.762 0-5 2.238-5 5s2.238 5 5 5h23a8 8 0 1 0 0-16z"></path></svg>`,
+    shower1: `<svg width="800" height="800" viewBox="0 0 36 36"><path style="stroke:#fff;stroke-opacity:0;fill:#ffac33" d="M13 2s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2zM4 13s2 0 2 2-2 2-2 2H2s-2 0-2-2 2-2 2-2zm3.872-6.957s1.414 1.414 0 2.828-2.828 0-2.828 0L3.629 7.458s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0zm17.085 2.828s-1.414 1.414-2.828 0 0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0 0 2.828 0 2.828z"/><circle style="stroke:#fff;stroke-opacity:0;fill:#ffac33" cx="15.1" cy="15" r="8"/><path style="stroke:#fff;stroke-opacity:0;fill:#ffac33;fill-rule:evenodd" d="M3.537 25.36c1.414 1.414 2.828 0 2.828 0l1.414-1.414s1.414-1.414 0-2.828-2.828 0-2.828 0l-1.414 1.414s-1.414 1.414 0 2.828Zm26.288-10.535c0-2-2-2-2-2h-2s-2 0-2 2 2 2 2 2h2s2 0 2-2Z"/><path style="stroke:#fff;stroke-opacity:0;fill:#e1e8ed" d="M29.135 16.112a7 7 0 0 0-2.05.303c-.768-2.144-2.85-3.685-5.305-3.685-2.633 0-4.838 1.772-5.449 4.16a3.9 3.9 0 0 0-2.337-.778c-2.15 0-3.893 1.703-3.893 3.804 0 .51.107.996.293 1.44a4.4 4.4 0 0 0-1.159-.172c-2.39 0-4.325 1.892-4.325 4.227s1.936 4.227 4.325 4.227h19.899c3.823 0 6.921-3.027 6.921-6.763s-3.098-6.763-6.92-6.763Z"/><path style="stroke:#fff;stroke-opacity:0;fill:#5dadec" d="m14.784 33.675-.085-2.594-2.175 1.295c-.5.268-.805.797-.786 1.364.033.84.733 1.5 1.574 1.481a1.497 1.497 0 0 0 1.472-1.546Zm-5.29-1.167-.087-2.594-2.176 1.295c-.5.268-.805.796-.785 1.364 a1.54 1.54 0 0 0 1.574 1.48 1.497 1.497 0 0 0 1.473-1.545Zm10.613.409-.085-2.594-2.175 1.295c-.5.268-.805.797-.786 1.364.033.84.733 1.5 1.574 1.48a1.496 1.496 0 0 0 1.472-1.545Zm4.533.758-.086-2.594-2.175 1.295c-.5.268-.805.797-.785 1.364.033.84.733 1.5 1.574 1.481a1.496 1.496 0 0 0 1.472-1.546Zm4.565-1.167-.087-2.594-2.175 1.295c-.5.268-.805.797-.785 1.364.033.84.733 1.5 1.574 1.48a1.497 1.497 0 0 0 1.473-1.545Z"/></svg>`,
     rain: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#E1E8ED" d="M28 4c-.825 0-1.62.125-2.369.357A6.498 6.498 0 0 0 19.5 0c-3.044 0-5.592 2.096-6.299 4.921A4.459 4.459 0 0 0 10.5 4A4.5 4.5 0 0 0 6 8.5c0 .604.123 1.178.339 1.704A4.98 4.98 0 0 0 5 10c-2.762 0-5 2.238-5 5s2.238 5 5 5h23a8 8 0 1 0 0-16z"></path><path fill="#5DADEC" d="M11.999 24.961l-.113-3.421l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799A2.033 2.033 0 0 0 10.056 27a1.975 1.975 0 0 0 1.943-2.039zm-1.979 7.46L9.907 29l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799a2.033 2.033 0 0 0 2.076 1.953a1.974 1.974 0 0 0 1.943-2.039zm-5-4.46l-.113-3.421l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799A2.034 2.034 0 0 0 3.077 30a1.974 1.974 0 0 0 1.943-2.039zm18-3l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 21.078 27a1.974 1.974 0 0 0 1.942-2.039zm-6.021 4l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 15.057 31a1.974 1.974 0 0 0 1.942-2.039zm5.021 4.46L21.906 30l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799a2.033 2.033 0 0 0 2.076 1.953a1.974 1.974 0 0 0 1.943-2.039zm6.979-5.46l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 27.057 30a1.974 1.974 0 0 0 1.942-2.039z"></path></svg>`,
-    thunderstorm: `<svg width="800px" height="800px" viewBox="0 0 36 36"  aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#F4900C" d="M13.917 36a.417.417 0 0 1-.371-.607L17 29h-5.078c-.174 0-.438-.031-.562-.297c-.114-.243-.057-.474.047-.703L15 19c.078-.067 6.902.393 7 .393a.417.417 0 0 1 .369.608l-3.817 6h5.032c.174 0 .329.108.391.271a.418.418 0 0 1-.119.461l-9.666 9.166a.422.422 0 0 1-.273.101z"></path><path fill="#E1E8ED" d="M28 4c-.825 0-1.62.125-2.369.357A6.498 6.498 0 0 0 19.5 0c-3.044 0-5.592 2.096-6.299 4.921A4.459 4.459 0 0 0 10.5 4A4.5 4.5 0 0 0 6 8.5c0 .604.123 1.178.339 1.704A4.98 4.98 0 0 0 5 10c-2.762 0-5 2.238-5 5s2.238 5 5 5h23a8 8 0 1 0 0-16z"></path><path fill="#5DADEC" d="M10.999 24.961l-.113-3.421l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799A2.034 2.034 0 0 0 9.056 27a1.975 1.975 0 0 0 1.943-2.039zm-2 8l-.113-3.421l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799A2.034 2.034 0 0 0 7.056 35a1.974 1.974 0 0 0 1.943-2.039zm-4.979-5.54L3.907 24l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799a2.033 2.033 0 0 0 2.076 1.953a1.974 1.974 0 0 0 1.943-2.039zm25-2.46l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 27.078 27a1.974 1.974 0 0 0 1.942-2.039zm-2 9l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 25.078 36a1.974 1.974 0 0 0 1.942-2.039zm6-4l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 31.078 32a1.974 1.974 0 0 0 1.942-2.039z"></path></svg>`,
-    windy: `<svg version="1.1" id="Layer_1" xmlns= x="0px" y="0px" viewBox="0 0 495 495" style="enable-background:new 0 0 495 495;" xml:space="preserve"><g>	<path style="fill:#BDDBFF;" d="M340.924,119.191c0-34.657-28.196-62.853-62.854-62.853h-20v40h20c12.602,0,22.854,10.252,22.854,22.853s-10.252,22.853-22.854,22.853H0v40h278.07C312.728,182.044,340.924,153.848,340.924,119.191z"/><path style="fill:#BDDBFF;" d="M355.109,312.956H0v40h355.109c12.601,0,22.853,10.252,22.853,22.853s-10.252,22.853-22.853,22.853h-20v40h20c34.657,0,62.853-28.196,62.853-62.853S389.767,312.956,355.109,312.956z"/><rect x="176.088" y="227.5" style="fill:#9BC9FF;" width="318.912" height="40"/><rect y="227.5" style="fill:#9BC9FF;" width="128.044" height="40"/></g></svg>`,
-    dry: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#A6D388" d="M6.401 28.55c5.006 5.006 16.502 11.969 29.533-.07c-7.366-1.417-8.662-10.789-13.669-15.794c-5.006-5.007-11.991-6.139-16.998-1.133c-5.006 5.006-3.873 11.99 1.134 16.997z"></path><path fill="#77B255" d="M24.684 29.81c6.128 1.634 10.658-.738 11.076-1.156c0 0-3.786 1.751-10.359-1.476c.952-1.212 3.854-2.909 3.854-2.909c-.553-.346-4.078-.225-6.485 1.429a37.028 37.028 0 0 1-3.673-2.675l.84-.871c3.25-3.384 6.944-2.584 6.944-2.584c-.638-.613-5.599-3.441-9.583.7l-.613.638a54.727 54.727 0 0 1-1.294-1.25l-1.85-1.85l1.064-1.065c3.321-3.32 8.226-3.451 8.226-3.451c-.626-.627-6.863-2.649-10.924 1.412l-.736.735l-8.292-8.294c-.626-.627-1.692-.575-2.317.05c-.626.626-.677 1.691-.051 2.317l8.293 8.293l-.059.059C4.684 21.924 6.37 28.496 6.997 29.123c0 0 .468-5.242 3.789-8.562l.387-.388l3.501 3.502c.057.057.113.106.17.163c-2.425 4.797 1.229 10.34 1.958 10.784c0 0-1.465-4.723.48-8.635c1.526 1.195 3.02 2.095 4.457 2.755c.083 2.993 2.707 5.7 3.344 5.931c0 0-.911-3.003-.534-4.487l.135-.376z"></path><path d="M22.083 10a1.001 1.001 0 0 1-.375-1.927c.166-.068 4.016-1.698 4.416-6.163a1 1 0 1 1 1.992.178c-.512 5.711-5.451 7.755-5.661 7.839a.978.978 0 0 1-.372.073zm5 4a1 1 0 0 1-.334-1.942c.188-.068 4.525-1.711 5.38-8.188a.99.99 0 0 1 1.122-.86a.998.998 0 0 1 .86 1.122c-1.021 7.75-6.468 9.733-6.699 9.813c-.109.037-.22.055-.329.055zm3.001 6a1.001 1.001 0 0 1-.483-1.876c.027-.015 2.751-1.536 3.601-3.518a1 1 0 0 1 1.837.788c-1.123 2.62-4.339 4.408-4.475 4.483a1.003 1.003 0 0 1-.48.123z" fill="#5DADEC"></path></svg>`,
-    humid: `<svg width="800px" height="800px" viewBox="0 0 36 36"  aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#5DADEC" d="M22.855.758L7.875 7.024l12.537 9.733c2.633 2.224 6.377 2.937 9.77 1.518c4.826-2.018 7.096-7.576 5.072-12.413C33.232 1.024 27.68-1.261 22.855.758zm-9.962 17.924L2.05 10.284L.137 23.529a7.993 7.993 0 0 0 2.958 7.803a8.001 8.001 0 0 0 9.798-12.65zm15.339 7.015l-8.156-4.69l-.033 9.223c-.088 2 .904 3.98 2.75 5.041a5.462 5.462 0 0 0 7.479-2.051c1.499-2.644.589-6.013-2.04-7.523z"></path></svg>`,
-    fog: `<svg width="800px" height="800px" viewBox="0 0 36 36"  aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#F5F8FA" d="M32 0H4a4 4 0 0 0-4 4v6h36V4a4 4 0 0 0-4-4z"></path><path fill="#E1E8ED" d="M36 16.368V9.257a4.148 4.148 0 0 0-2.188-.632c-1.325 0-2.491.627-3.259 1.588A4.466 4.466 0 0 0 27.5 9c-.721 0-1.392.185-1.996.486C24.763 8.018 23.257 7 21.5 7c-.607 0-1.184.124-1.712.342a3.49 3.49 0 0 0-6.189-.8A4.443 4.443 0 0 0 11.5 6c-1.641 0-3.062.887-3.848 2.198A4.99 4.99 0 0 0 3 5a4.955 4.955 0 0 0-3 1.022v7.955C.838 14.611 24.5 18 24.5 18s10.862-1.238 11.5-1.632z"></path><path fill="#CCD6DD" d="M36 14.771C35.157 13.7 33.864 13 32.396 13c-1.997 0-3.681 1.279-4.318 3.059A3.35 3.35 0 0 0 27.5 16c-.82 0-1.565.294-2.162.767A3.964 3.964 0 0 0 23 16c-.353 0-.689.06-1.015.146c.002-.049.015-.096.015-.146a4 4 0 0 0-4-4a3.974 3.974 0 0 0-3.024 1.409A4.989 4.989 0 0 0 13 13c-.18 0-.35.034-.525.053A6.998 6.998 0 0 0 6 8.709a6.989 6.989 0 0 0-6 3.408v13.544l32.396-1.452s2.761-1.343 3.604-2.966v-6.472z"></path><path fill="#E1E8ED" d="M36 30.499V20.422A4.979 4.979 0 0 0 34 20a4.99 4.99 0 0 0-4.652 3.198C28.562 21.887 27.141 21 25.5 21c-.763 0-1.47.207-2.099.542a3.49 3.49 0 0 0-6.189.8A4.474 4.474 0 0 0 15.5 22c-1.757 0-3.263 1.018-4.004 2.486A4.453 4.453 0 0 0 9.5 24a4.47 4.47 0 0 0-3.054 1.213c-.768-.961-1.934-1.588-3.259-1.588c-1.284 0-2.419.591-3.188 1.501v5.373H36z"></path><path fill="#F5F8FA" d="M25 25c-.821 0-1.582.249-2.217.673a4.355 4.355 0 0 0-4.534-2.863a4.349 4.349 0 0 0-3.777 3.298a3.258 3.258 0 0 0-.55 0a3.289 3.289 0 0 0-1.965.93a3.76 3.76 0 0 0-2.278-.498a3.708 3.708 0 0 0-.942.236c-.003-.047.004-.093 0-.139a3.79 3.79 0 0 0-4.155-3.387a3.767 3.767 0 0 0-2.716 1.619A4.699 4.699 0 0 0 0 24.672V32c0 .773.23 1.489.61 2.101C.715 34.098 29 31.209 29 29s-1.791-4-4-4z"></path><path fill="#CCD6DD" d="M32 36a4 4 0 0 0 4-4v-7.608a6.962 6.962 0 0 0-3-.683a6.998 6.998 0 0 0-6.475 4.344C26.35 28.034 26.18 28 26 28c-.702 0-1.369.147-1.976.409A3.974 3.974 0 0 0 21 27a4 4 0 0 0-4 4c0 .05.013.097.015.146A3.956 3.956 0 0 0 16 31c-.876 0-1.679.289-2.338.767A3.468 3.468 0 0 0 11.5 31a3.33 3.33 0 0 0-.577.059C10.286 29.279 8.602 28 6.604 28c-1.987 0-3.665 1.266-4.31 3.03C2.195 31.022 2.101 31 2 31c-.732 0-1.41.211-2 .555V32a4 4 0 0 0 4 4h28z"></path></svg>`,
-    error: `<svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" ><path d="M16.71,16.29h0l-13-13A1,1,0,0,0,2.29,4.71L5.65,8.06a7,7,0,0,0-.59,2A4,4,0,0,0,6,18h9.59l2.7,2.71a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42ZM6,16a2,2,0,0,1,0-4,1,1,0,0,0,1-1,5,5,0,0,1,.2-1.39L13.59,16ZM18.42,8.22A7,7,0,0,0,12,4a6.74,6.74,0,0,0-2.32.4,1,1,0,0,0,.66,1.88A4.91,4.91,0,0,1,12,6a5,5,0,0,1,4.73,3.39,1,1,0,0,0,.78.67,3,3,0,0,1,1.85,4.79,1,1,0,0,0,.16,1.4,1,1,0,0,0,.62.22,1,1,0,0,0,.78-.38,5,5,0,0,0-2.5-7.87Z"/></svg>`,
-    cold:`<svg width="800" height="800" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="iconify iconify--twemoji"><circle fill="#e1e8ed" cx="18" cy="26" r="10"/><path fill="#e1e8ed" d="M12 11a6 6 0 1 1 12 0 6 6 0 0 1-12 0"/><path fill="#414042" d="M23 6a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2z"/><path fill="#231f20" d="M25 7a1 1 0 0 1-1 1H12a1 1 0 0 1 0-2h12a1 1 0 0 1 1 1"/><path fill="#dd2e44" d="M22.5 15h-9a1.495 1.495 0 0 0-.5 2.908V25a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-7h6.5a1.5 1.5 0 1 0 0-3"/><path fill="#414042" d="M19 24a1 1 0 1 1-1.998.002A1 1 0 0 1 19 24m0 5a1 1 0 1 1-1.998.002A1 1 0 0 1 19 29"/><path fill="#f4900c" d="M19 12a1 1 0 1 1-1.998.002A1 1 0 0 1 19 12"/><path fill="#414042" d="M16 10a1 1 0 1 1-2 0 1 1 0 0 1 2 0m6 0a1 1 0 1 1-2 0 1 1 0 1 1 2 0"/><path fill="#ffac33" d="m10.394 20.081-3.452-1.479-.547-2.866a1 1 0 0 0-1.965.375l.294 1.54-1.33-.57a.999.999 0 1 0-.788 1.838l.743.318-1.056 1.056a.999.999 0 1 0 1.414 1.414l1.621-1.621 4.278 1.833a.999.999 0 1 0 .788-1.838m22.922-3.03-1.465-.488.855-.855a.999.999 0 1 0-1.414-1.414l-.751.751-.572-2.287a.999.999 0 1 0-1.939.486l.862 3.45-3.6 3.6a.999.999 0 1 0 1.415 1.413l3.563-3.563 2.413.805a.999.999 0 1 0 .633-1.898"/></svg>`,
-    hot: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#a8f7ff" d="M306.637 314.563V59.077C306.637 31.11 283.966 8.44 256 8.44s-50.637 22.671-50.637 50.637v255.486c-30.27 17.512-50.637 50.238-50.637 87.723 0 55.933 45.342 101.275 101.275 101.275s101.275-45.342 101.275-101.275c-.001-37.485-20.369-70.212-50.639-87.723"/><path style="fill:#fc3737" d="M256 475.429c-40.331 0-73.143-32.812-73.143-73.143 0-31.887 20.609-59.904 50.637-69.603V87.209h45.011v245.474c30.028 9.699 50.637 37.717 50.637 69.603.001 40.331-32.811 73.143-73.142 73.143"/><path style="fill:#db1616" d="M256 450.11c-26.371 0-47.824-21.453-47.824-47.824a8.44 8.44 0 0 1 8.44-8.44 8.44 8.44 0 0 1 8.44 8.44c0 17.063 13.883 30.945 30.945 30.945s30.945-13.883 30.945-30.945c0-13.477-8.604-25.312-21.409-29.448a8.44 8.44 0 0 1-5.436-10.625c1.432-4.435 6.194-6.871 10.625-5.436 19.798 6.394 33.1 24.684 33.1 45.509-.002 26.371-21.455 47.824-47.826 47.824"/><path d="M256 512c-60.497 0-109.714-49.217-109.714-109.714 0-37.395 19.28-72.378 50.637-92.462V59.077C196.923 26.502 223.426 0 256 0s59.077 26.502 59.077 59.077v250.747c31.357 20.084 50.637 55.066 50.637 92.462C365.714 462.783 316.497 512 256 512m0-495.121c-23.268 0-42.198 18.929-42.198 42.198v255.486a8.44 8.44 0 0 1-4.213 7.305c-28.635 16.566-46.424 47.381-46.424 80.418 0 51.189 41.646 92.835 92.835 92.835s92.835-41.646 92.835-92.835c0-33.037-17.789-63.851-46.424-80.418a8.44 8.44 0 0 1-4.213-7.305V59.077c0-23.269-18.93-42.198-42.198-42.198"/><path d="M256 478.242c-41.883 0-75.956-34.073-75.956-75.956 0-32.419 20.514-60.988 50.637-71.62V92.835a8.44 8.44 0 0 1 8.44-8.44h33.758a8.44 8.44 0 0 1 8.44 8.44v237.83c30.124 10.633 50.637 39.201 50.637 71.62 0 41.883-34.073 75.957-75.956 75.957m-8.44-376.967v235.63a8.44 8.44 0 0 1-6.329 8.172c-26.088 6.739-44.309 30.265-44.309 57.209 0 32.574 26.502 59.077 59.077 59.077s59.077-26.502 59.077-59.077c0-26.944-18.22-50.47-44.309-57.209a8.44 8.44 0 0 1-6.329-8.172v-235.63z"/></svg>`
+    thunderstorm: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#F4900C" d="M13.917 36a.417.417 0 0 1-.371-.607L17 29h-5.078c-.174 0-.438-.031-.562-.297c-.114-.243-.057-.474.047-.703L15 19c.078-.067 6.902.393 7 .393a.417.417 0 0 1 .369.608l-3.817 6h5.032c.174 0 .329.108.391.271a.418.418 0 0 1-.119.461l-9.666 9.166a.422.422 0 0 1-.273.101z"></path><path fill="#E1E8ED" d="M28 4c-.825 0-1.62.125-2.369.357A6.498 6.498 0 0 0 19.5 0c-3.044 0-5.592 2.096-6.299 4.921A4.459 4.459 0 0 0 10.5 4A4.5 4.5 0 0 0 6 8.5c0 .604.123 1.178.339 1.704A4.98 4.98 0 0 0 5 10c-2.762 0-5 2.238-5 5s2.238 5 5 5h23a8 8 0 1 0 0-16z"></path><path fill="#5DADEC" d="M10.999 24.961l-.113-3.421l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799A2.034 2.034 0 0 0 9.056 27a1.975 1.975 0 0 0 1.943-2.039zm-2 8l-.113-3.421l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799A2.034 2.034 0 0 0 7.056 35a1.974 1.974 0 0 0 1.943-2.039zm-4.979-5.54L3.907 24l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799a2.033 2.033 0 0 0 2.076 1.953a1.974 1.974 0 0 0 1.943-2.039zm25-2.46l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 27.078 27a1.974 1.974 0 0 0 1.942-2.039zm-2 9l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 25.078 36a1.974 1.974 0 0 0 1.942-2.039zm6-4l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 31.078 32a1.974 1.974 0 0 0 1.942-2.039z"></path></svg>`,
+    windy: `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 495 495" style="enable-background:new 0 0 495 495;" xml:space="preserve"><path style="fill:#CCD6DD;" d="M195,135c0-24.8,20.2-45,45-45s45,20.2,45,45s-20.2,45-45,45H15c-8.3,0-15-6.7-15-15s6.7-15,15-15h225c8.3,0,15-6.7,15-15s-6.7-15-15-15s-15,6.7-15,15v15"/><path style="fill:#CCD6DD;" d="M375,255c0-24.8,20.2-45,45-45s45,20.2,45,45s-20.2,45-45,45H15c-8.3,0-15-6.7-15-15s6.7-15,15-15h405c8.3,0,15-6.7,15-15s-6.7-15-15-15s-15,6.7-15,15v15"/><path style="fill:#CCD6DD;" d="M255,345c0-16.5,13.5-30,30-30s30,13.5,30,30s-13.5,30-30,30H15c-8.3,0-15-6.7-15-15s6.7-15,15-15h270c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0c8.3,0,15-6.7,15-15s-6.7-15-15-15s-15,6.7-15,15v15"/></svg>`,
+    dry: `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 491.5 491.5" style="enable-background:new 0 0 491.5 491.5;" xml:space="preserve"><path style="fill:#FFAC33;" d="M381.7,215c0,16.6-6,31.7-15.8,43.6l105.7,105.7c5.9,5.9,5.9,15.4,0,21.2c-5.9,5.9-15.4,5.9-21.2,0L344.8,279.8c-11.9,9.8-27,15.8-43.6,15.8c-38.3,0-69.3-31-69.3-69.3s31-69.3,69.3-69.3S381.7,176.7,381.7,215z"/><path style="fill:#E1E8ED;" d="M152.2,295.6c0-76.3,62.1-138.4,138.4-138.4c10.3,0,20.3,1.1,30,3.3c3.5-22.3,13.8-42.5,29.1-58.7c-17.6-4.5-36.1-7-55.1-7C184.2,94.8,94.8,184.2,94.8,294.8c0,2.1,0.1,4.2,0.2,6.3c15.2-3.8,31.2-5.5,47.7-5.5C146.4,295.6,149.3,295.6,152.2,295.6z"/><path style="fill:#CCD6DD;" d="M294.8,421.5c-44,0-84.1-14.3-116.6-38.4c-1.9,6.7-3,13.8-3,21.1c0,43.8,35.5,79.3,79.3,79.3h40.3c43.8,0,79.3-35.5,79.3-79.3c0-1.8-.1-3.6-.2-5.4C349.4,414.2,323,421.5,294.8,421.5z"/></svg>`,
+    humid: `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path style="fill:#5DADEC;" d="M256,43.5c0,0,131.7,163.6,131.7,255.4c0,72.7-59,131.7-131.7,131.7S124.3,371.7,124.3,299C124.3,207.1,256,43.5,256,43.5z"/></svg>`,
+    fog: `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 443.3 443.3" style="enable-background:new 0 0 443.3 443.3;" xml:space="preserve"><path style="fill:#CCD6DD;" d="M16.4,188.3h410.5c9.1,0,16.4-7.3,16.4-16.4s-7.3-16.4-16.4-16.4H16.4C7.3,155.5,0,162.8,0,171.9S7.3,188.3,16.4,188.3z"/><path style="fill:#E1E8ED;" d="M426.9,255H16.4C7.3,255,0,262.3,0,271.4c0,9.1,7.3,16.4,16.4,16.4h410.5c9.1,0,16.4-7.3,16.4-16.4C443.3,262.3,436,255,426.9,255z"/><path style="fill:#CCD6DD;" d="M352.5,354.5H90.8c-9.1,0-16.4,7.3-16.4,16.4c0,9.1,7.3,16.4,16.4,16.4h261.7c9.1,0,16.4-7.3,16.4-16.4C368.9,361.8,361.6,354.5,352.5,354.5z"/><path style="fill:#E1E8ED;" d="M340.5,56H102.8c-9.1,0-16.4,7.3-16.4,16.4s7.3,16.4,16.4,16.4h237.7c9.1,0,16.4-7.3,16.4-16.4S349.6,56,340.5,56z"/></svg>`,
+    error: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#CCD6DD" d="M31 22c-.467 0-.91.085-1.339.204c.216-.526.339-1.1.339-1.704a4.5 4.5 0 0 0-4.5-4.5a4.459 4.459 0 0 0-2.701.921A6.497 6.497 0 0 0 16.5 12a6.497 6.497 0 0 0-6.131 4.357A8 8 0 1 0 8 32h23c2.762 0 5-2.238 5-5s-2.238-5-5-5z"></path></svg>`,
+    hot: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#a8bbcc" d="M330.7 151.2h-36v-6c0-3.3-2.7-6-6-6s-6 2.7-6 6v6h-36v-6c0-3.3-2.7-6-6-6s-6 2.7-6 6v6h-36v-6c0-3.3-2.7-6-6-6s-6 2.7-6 6v6h-14.1c-17.6 0-32 14.4-32 32v188c0 14.8 10.1 27.3 24 30.9v23.2c0 35.3 28.7 64 64 64s64-28.7 64-64v-23.2c13.9-3.6 24-16.1 24-30.9v-188c0-17.6-14.4-32-32-32z"/><circle style="fill:#ff4d4d" cx="256.7" cy="397.2" r="38"/><path style="fill:#ff4d4d" d="M250.7 207.2h12v159h-12z"/><path style="fill:#fff" d="M265.7 175.2h-18c-3.3 0-6-2.7-6-6s2.7-6 6-6h18c3.3 0 6 2.7 6 6s-2.7 6-6 6zM265.7 223.2h-18c-3.3 0-6-2.7-6-6s2.7-6 6-6h18c3.3 0 6 2.7 6 6s-2.7 6-6 6zM265.7 271.2h-18c-3.3 0-6-2.7-6-6s2.7-6 6-6h18c3.3 0 6 2.7 6 6s-2.7 6-6 6zM265.7 319.2h-18c-3.3 0-6-2.7-6-6s2.7-6 6-6h18c3.3 0 6 2.7 6 6s-2.7 6-6 6z"/></svg>`,
+    cold: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#a8bbcc" d="M330.7 151.2h-36v-6c0-3.3-2.7-6-6-6s-6 2.7-6 6v6h-36v-6c0-3.3-2.7-6-6-6s-6 2.7-6 6v6h-36v-6c0-3.3-2.7-6-6-6s-6 2.7-6 6v6h-14.1c-17.6 0-32 14.4-32 32v188c0 14.8 10.1 27.3 24 30.9v23.2c0 35.3 28.7 64 64 64s64-28.7 64-64v-23.2c13.9-3.6 24-16.1 24-30.9v-188c0-17.6-14.4-32-32-32z"/><circle style="fill:#3399ff" cx="256.7" cy="397.2" r="38"/><path style="fill:#3399ff" d="M250.7 207.2h12v159h-12z"/><path style="fill:#fff" d="M265.7 175.2h-18c-3.3 0-6-2.7-6-6s2.7-6 6-6h18c3.3 0 6 2.7 6 6s-2.7 6-6 6zM265.7 223.2h-18c-3.3 0-6-2.7-6-6s2.7-6 6-6h18c3.3 0 6 2.7 6 6s-2.7 6-6 6zM265.7 271.2h-18c-3.3 0-6-2.7-6-6s2.7-6 6-6h18c3.3 0 6 2.7 6 6s-2.7 6-6 6zM265.7 319.2h-18c-3.3 0-6-2.7-6-6s2.7-6 6-6h18c3.3 0 6 2.7 6 6s-2.7 6-6 6z"/></svg>`,
+    typhoonSignal: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="800px" height="800px"><path fill="#d9383a" d="M18 2C9.164 2 2 9.164 2 18s7.164 16 16 16s16-7.164 16-16S26.836 2 18 2zm0 28c-6.627 0-12-5.373-12-12S11.373 6 18 6s12 5.373 12 12s-5.373 12-12 12z"/><path fill="#d9383a" d="M18 10a8 8 0 0 0-8 8h3a5 5 0 0 1 5-5v-3zm0 16a8 8 0 0 0 8-8h-3a5 5 0 0 1-5 5v3z"/></svg>`
 };
-
 
 const HEADER_SVGS = {
-    sun: `<svg viewBox="0 0 24 24" fill="none" stroke="var(--icon-sun)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`,
-    moon: `<svg viewBox="0 0 24 24" fill="none" stroke="var(--icon-moon)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`
+    sun: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--icon-sun)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`,
+    moon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--icon-moon)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`
 };
+
+const WARNING_SVGS = {
+    WHOT: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff4d4d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>`,
+    WCOLD: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3399ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>`,
+    RAIN_STORM: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e67e22" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 13a4 4 0 0 0-8 0V15a4 4 0 0 0 8 0v-2z"></path><line x1="8" y1="19" x2="8" y2="21"></line><line x1="12" y1="19" x2="12" y2="23"></line><line x1="16" y1="19" x2="16" y2="21"></line></svg>`,
+    TYPHOON: SVG_LIBRARY.typhoonSignal,
+    DEFAULT: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d9383a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>`
+};
+
+let currentLang = localStorage.getItem('weatherLang') || 'en';
+let isUserOverridden = false;
 
 const staticDictionary = {
     en: {
         title: "Hong Kong Weather Hub",
-        syncLoading: "Connecting to data.gov.hk feeds...",
-        syncSuccess: "Live connection active • Refreshed at ",
         humidity: "Humidity",
-        uv: "UV Index",
-        rain: "Rain Chance",
         wind: "Wind",
-        forecastHeading: "5-Days Weather Forecast",
-        loadingTrends: "Parsing upcoming structural trends...",
-        warningLbl: "Active Warning",
-        langBtnText: "繁中"
+        uv: "UV Index",
+        psr: "Rain Chance",
+        syncSuccess: "Updated at: ",
+        toggleText: "繁中",
+        forecastTitle: "5-Days Weather Forecast",
+        rangePrefix: "Today's Range: "
     },
     tc: {
-        title: "香港天氣中心",
-        syncLoading: "正在連線至 data.gov.hk 數據源...",
-        syncSuccess: "數據即時同步中 • 更新於 ",
-        humidity: "相對濕度",
-        uv: "紫外線指數",
-        rain: "降雨概率",
+        title: "香港天氣總覽",
+        humidity: "濕度",
         wind: "風向風速",
-        forecastHeading: "五天天氣預報",
-        loadingTrends: "正在解析未來天氣趨勢...",
-        warningLbl: "生效警告",
-        langBtnText: "English"
+        uv: "紫外線指數",
+        psr: "降雨機率",
+        syncSuccess: "更新時間: ",
+        toggleText: "English",
+        forecastTitle: "五天天氣預報",
+        rangePrefix: "今日氣溫變化: "
     }
 };
 
-// FIX: Pull language from memory vault or fallback to english
-let currentLang = localStorage.getItem('weatherLang') || 'en';
-
-const toggle = document.getElementById('theme-toggle');
-const modeLabel = document.getElementById('mode-label');
-const modeVisualIcon = document.getElementById('mode-visual-icon');
-let isUserOverridden = false;
+function translateStaticInterface(lang) {
+    document.getElementById('main-title').textContent = staticDictionary[lang].title;
+    document.getElementById('lbl-humidity').textContent = staticDictionary[lang].humidity;
+    document.getElementById('lbl-wind').textContent = staticDictionary[lang].wind;
+    document.getElementById('lbl-uv').textContent = staticDictionary[lang].uv;
+    document.getElementById('lbl-psr').textContent = staticDictionary[lang].psr;
+    document.getElementById('lang-text').textContent = staticDictionary[lang].toggleText;
+    document.getElementById('forecast-title').textContent = staticDictionary[lang].forecastTitle;
+}
 
 function getWeatherIcon(iconId) {
     const id = parseInt(iconId, 10);
-    if ([50].includes(id)) return SVG_LIBRARY.sunny;                   
-    if ([51, 52].includes(id)) return SVG_LIBRARY.partlyCloudy;                   
-    if ([53, 54].includes(id)) return SVG_LIBRARY.shower1;                     
-    if ([70, 71, 72, 73, 74, 75, 77].includes(id)) return SVG_LIBRARY.moon;    
-    if ([60, 61, 76].includes(id)) return SVG_LIBRARY.cloudy;             
-    if ([62, 63, 64].includes(id)) return SVG_LIBRARY.rain;               
-    if ([65].includes(id)) return SVG_LIBRARY.thunderstorm;               
+    if ([50].includes(id)) return SVG_LIBRARY.sunny;
+    if ([51, 52].includes(id)) return SVG_LIBRARY.partlyCloudy;
+    if ([53, 54].includes(id)) return SVG_LIBRARY.shower1;
+    if ([70, 71, 72, 73, 74, 75, 77].includes(id)) return SVG_LIBRARY.moon;
+    if ([60, 61, 76].includes(id)) return SVG_LIBRARY.cloudy;
+    if ([62, 63, 64].includes(id)) return SVG_LIBRARY.rain;
+    if ([65].includes(id)) return SVG_LIBRARY.thunderstorm;
     if ([80].includes(id)) return SVG_LIBRARY.windy;
     if ([81].includes(id)) return SVG_LIBRARY.dry;
     if ([82].includes(id)) return SVG_LIBRARY.humid;
     if ([83, 84, 85].includes(id)) return SVG_LIBRARY.fog;
     if ([90, 91].includes(id)) return SVG_LIBRARY.hot;
     if ([92, 93].includes(id)) return SVG_LIBRARY.cold;
-    return SVG_LIBRARY.error; 
+    return SVG_LIBRARY.error;
 }
 
 function getBriefForecastDescription(iconId, lang) {
@@ -111,57 +118,41 @@ function getBriefForecastDescription(iconId, lang) {
         92: { en: "Cold", tc: "寒冷" },
         93: { en: "Cold", tc: "寒冷" }
     };
-    return descMap[id] ? descMap[id][lang] : (lang === 'en' ? "Not available" : "暫無資料");
-}
-
-function translateStaticInterface(lang) {
-    const dict = staticDictionary[lang];
-    document.getElementById('main-title').textContent = dict.title;
-    document.getElementById('lbl-humidity').textContent = dict.humidity;
-    document.getElementById('lbl-uv').textContent = dict.uv;
-    document.getElementById('lbl-psr').textContent = dict.rain;
-    document.getElementById('lbl-wind').textContent = dict.wind;
-    document.getElementById('forecast-title').textContent = dict.forecastHeading;
-    document.getElementById('lang-text').textContent = dict.langBtnText;
-    
-    const loadingEl = document.getElementById('forecast-loading');
-    if (loadingEl) loadingEl.textContent = dict.loadingTrends;
+    return descMap[id]?.[lang] ?? (lang === 'en' ? "Cloudy" : "多雲");
 }
 
 function evaluateSolarSystemTheme() {
     if (isUserOverridden) return;
     const currentHour = new Date().getHours();
+    const toggle = document.getElementById('theme-toggle');
+    const modeVisualIcon = document.getElementById('mode-visual-icon');
     const isDaytime = currentHour >= 6 && currentHour < 18;
-
+    
     if (isDaytime) {
         document.documentElement.removeAttribute('data-theme');
         if (toggle) toggle.checked = false;
-        if (modeLabel) modeLabel.textContent = "Auto";
         if (modeVisualIcon) modeVisualIcon.innerHTML = HEADER_SVGS.sun;
     } else {
         document.documentElement.setAttribute('data-theme', 'dark');
         if (toggle) toggle.checked = true;
-        if (modeLabel) modeLabel.textContent = "Auto";
         if (modeVisualIcon) modeVisualIcon.innerHTML = HEADER_SVGS.moon;
     }
 }
 
-if (toggle) {
-    toggle.addEventListener('change', (e) => {
+if (document.getElementById('theme-toggle')) {
+    document.getElementById('theme-toggle').addEventListener('change', (e) => {
         isUserOverridden = true;
+        const modeVisualIcon = document.getElementById('mode-visual-icon');
         if (e.target.checked) {
             document.documentElement.setAttribute('data-theme', 'dark');
-            modeLabel.textContent = "Manual";
-            modeVisualIcon.innerHTML = HEADER_SVGS.moon;
+            if (modeVisualIcon) modeVisualIcon.innerHTML = HEADER_SVGS.moon;
         } else {
             document.documentElement.removeAttribute('data-theme');
-            modeLabel.textContent = "Manual";
-            modeVisualIcon.innerHTML = HEADER_SVGS.sun;
+            if (modeVisualIcon) modeVisualIcon.innerHTML = HEADER_SVGS.sun;
         }
     });
 }
 
-// FIX: Language switcher now commits language preference to local storage
 document.getElementById('lang-toggle').addEventListener('click', () => {
     currentLang = currentLang === 'en' ? 'tc' : 'en';
     localStorage.setItem('weatherLang', currentLang);
@@ -170,120 +161,103 @@ document.getElementById('lang-toggle').addEventListener('click', () => {
 });
 
 function parseWindString(str) {
-    if (!str) return { direction: "N/A", speed: "N/A" };
-    if (currentLang === 'tc') {
-        const match = str.match(/(.*風)\s*([\d\s\u81f3]+\u7d1a)/) || str.match(/(.*)\s+(\d+\u81f3?\d*\u7d1a?)/);
-        if (match) {
-            return { direction: match[1].trim(), speed: match[2].trim().replace(/\s+/g, '') };
-        }
-        return { direction: str, speed: "" };
-    }
-
-    const match = str.match(/(.*) force ([\d ]+to[\d ]+)/i);
-    if (!match) return { direction: str, speed: "N/A" };
-
-    const directionRaw = match[1].trim();
-    const speed = `Force ${match[2].trim().replace(/\s+to\s+/g, '-')}`;
-    return { direction: directionRaw, speed };
+    if (!str) return { narrative: "--" };
+    return { narrative: str.replace(/\.$/, '').trim() };
 }
 
-// FIX: Added 'flw' node fetch for live precise wind streams, added clean string locale clock splits
-async function liveSyncWeatherEngine() {
-    const syncLabel = document.getElementById('sync-time');
-    try {
-        const [currentResponse, localForecastResponse, forecastResponse] = await Promise.all([
-            fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=${currentLang}`),
-            fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=flw&lang=${currentLang}`),
-            fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=${currentLang}`)
-        ]);
-
-        if (!currentResponse.ok || !localForecastResponse.ok || !forecastResponse.ok) throw new Error("API Node Error");
-
-        const currentPayload = await currentResponse.json();
-        const localForecastPayload = await localForecastResponse.json();
-        const forecastPayload = await forecastResponse.json();
-
-        if (localForecastPayload && localForecastPayload.forecastWind) {
-            currentPayload.extractedWind = localForecastPayload.forecastWind;
-        }
-
-        processCurrentState(currentPayload, forecastPayload);
-        processForecastState(forecastPayload);
-        
-        const timeOptions = { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true };
-        const localeString = currentLang === 'en' ? 'en-US' : 'zh-HK';
-        const formattedTime = new Date().toLocaleTimeString(localeString, timeOptions);
-
-        syncLabel.textContent = `${staticDictionary[currentLang].syncSuccess}${formattedTime}`;
-    } catch (error) {
-        console.warn("API direct call failed/blocked. Injecting dynamic fallback mock dataset.");
-        injectMockTestingEnvironment();
-    }
-}
-
-function injectMockTestingEnvironment() {
-    const syncLabel = document.getElementById('sync-time');
-    const mockCurrent = {
-        temperature: { data: [{ value: 29 }] },
-        humidity: { data: [{ value: 78 }] },
-        icon: [60], 
-        weatherDescription: currentLang === 'en' ? ["Normal weather structures parsed."] : ["大體天色良好。"],
-        uvindex: { data: [{ value: 8 }] },
-        extractedWind: currentLang === 'en' ? "Easterly winds force 4 to 5" : "東風 4 至 5 級"
-    };
-
-    const mockForecast = {
-        weatherForecast: [
-            { forecastDate: "20260630", week: currentLang === 'en' ? "Tuesday" : "星期二", forecastMintemp: {value: 28}, forecastMaxtemp: {value: 33}, forecastMinrh: {value: 75}, forecastMaxrh: {value: 90}, ForecastIcon: 51, PSR: currentLang === 'en' ? "Low" : "低", forecastWind: currentLang === 'en' ? "East to southeasterly winds force 4 to 5." : "東至東南風 4 至 5 級。" }
-        ]
-    };
-
-    processCurrentState(mockCurrent, mockForecast);
-    processForecastState(mockForecast);
-    syncLabel.textContent = currentLang === 'en' ? "Mock Dataset Active (Data Localized)" : "本地模擬天氣數據啟動";
-}
-
-function processCurrentState(currentData, forecastData) {
+function processCurrentState(currentData, forecastData, warningPayload) {
     const tempValue = currentData.temperature?.data?.[0]?.value ?? "--";
     const humidityValue = currentData.humidity?.data?.[0]?.value ?? "--";
     const iconId = currentData.icon?.[0] ?? 50;
-    const descRow = document.getElementById('desc-row-container');
-    const descField = document.getElementById('cur-desc');
-    const statusField = document.getElementById('cur-icon-status');
     
-    if (statusField) statusField.textContent = getBriefForecastDescription(iconId, currentLang);
+    let skiesSummary = currentData.weatherDescription?.length > 0 
+        ? currentData.weatherDescription[0] 
+        : getBriefForecastDescription(iconId, currentLang);
 
-    let skiesSummary = currentLang === 'en' ? "Fine" : "良好";
-    if (currentData.weatherDescription) {
-        skiesSummary = Array.isArray(currentData.weatherDescription) ? currentData.weatherDescription[0] : currentData.weatherDescription;
+    let todayRangeString = "";
+    if (forecastData?.weatherForecast?.[0]) {
+        const todayMin = forecastData.weatherForecast[0].forecastMintemp?.value ?? "--";
+        const todayMax = forecastData.weatherForecast[0].forecastMaxtemp?.value ?? "--";
+        todayRangeString = `${staticDictionary[currentLang].rangePrefix}${todayMin}°C - ${todayMax}°C`;
     }
 
-    if (descRow && descField) {
-        descRow.style.display = 'block';
-        descField.textContent = skiesSummary;
+    const iconContainer = document.getElementById('cur-icon-container');
+    if (iconContainer) {
+        iconContainer.innerHTML = `
+            <div style="max-width: 100px; margin: 0 auto;">${getWeatherIcon(iconId)}</div>
+            <div class="forecast-desc" style="margin-top: 8px;">${skiesSummary}</div>
+            <div class="forecast-temp" style="margin-top: 4px; font-weight: 500;">${todayRangeString}</div>
+        `;
     }
 
-    let uvValue = "0";
-    if (currentData.uvindex?.data?.[0]) {
-        uvValue = currentData.uvindex.data[0].value;
-    }
-
-    let currentPsrValue = currentLang === 'en' ? "Low" : "低";
-    let rawWindString = currentData.extractedWind || ""; 
-    if (!rawWindString && forecastData?.weatherForecast?.[0]) {
-        rawWindString = forecastData.weatherForecast[0].forecastWind || "";
-    }
+    let uvValue = currentData.uvindex?.data?.[0]?.value ?? "0";
+    let currentPsrValue = forecastData?.weatherForecast?.[0]?.PSR ?? "--";
+    let rawWindString = currentData.extractedWind || forecastData?.weatherForecast?.[0]?.forecastWind || "";
 
     document.getElementById('cur-temp').textContent = tempValue;
     document.getElementById('cur-rh').textContent = humidityValue !== "--" ? `${humidityValue}%` : "--";
     document.getElementById('cur-uv').textContent = uvValue;
     document.getElementById('cur-psr').textContent = currentPsrValue;
-    document.getElementById('cur-icon-container').innerHTML = getWeatherIcon(iconId);
 
-    const windInfo = parseWindString(rawWindString);
     const windElement = document.getElementById('cur-wind');
     if (windElement) {
-        windElement.innerHTML = `${windInfo.direction}<br><span style="font-size: 14px; color: var(--text-muted); font-weight: 600;">${windInfo.speed}</span>`;
+        windElement.innerHTML = `<span style="font-weight: 600; color: var(--text-main);">${parseWindString(rawWindString).narrative}</span>`;
+    }
+
+    // WARNING LAYER PARSING ENGINE
+    const warningContainer = document.getElementById('warning-insertion-point');
+    if (warningContainer) {
+        warningContainer.innerHTML = "";
+        warningContainer.style.display = "none";
+
+        if (warningPayload && warningPayload.details && warningPayload.details.length > 0) {
+            warningPayload.details.forEach(item => {
+                const code = item.warningCode || "";
+                if (!item.contents || item.contents.length === 0) return;
+
+                let strokeClass = "default";
+                let iconSvg = WARNING_SVGS.DEFAULT;
+
+                if (code.includes("WHOT")) {
+                    strokeClass = "hot";
+                    iconSvg = WARNING_SVGS.WHOT;
+                } else if (code.includes("WCOLD")) {
+                    strokeClass = "cold";
+                    iconSvg = WARNING_SVGS.WCOLD;
+                } else if (code.includes("WRAINA") || code.includes("WRAINR") || code.includes("WRAINB") || code.includes("WTS")) {
+                    strokeClass = "rain";
+                    iconSvg = WARNING_SVGS.RAIN_STORM;
+                } else if (code.includes("WTC")) {
+                    strokeClass = "typhoon";
+                    iconSvg = WARNING_SVGS.TYPHOON;
+                }
+
+                const alertBanner = document.createElement('div');
+                alertBanner.className = `warning-alert-banner ${strokeClass}`;
+                alertBanner.style.cssText = "display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; margin-top: 14px; border-radius: 6px; width: 100%; box-sizing: border-box;";
+                
+                let renderContentHtml = "";
+                const absoluteHeader = item.contents[0] || "";
+
+                // Safer detection: Check if the text header itself specifies the Tropical Cyclone warning
+                if (code.includes("WTC") || absoluteHeader.includes("Tropical Cyclone") || absoluteHeader.includes("熱帶氣旋")) {
+                    // Extract exactly the first 3 lines and stitch them with line breaks
+                    const lineSlice = item.contents.slice(0, 3);
+                    renderContentHtml = lineSlice.join('<br>');
+                } else {
+                    // General Warning codes (Thunderstorm, etc.): Keep only the first complete sentence/line
+                    renderContentHtml = absoluteHeader;
+                }
+
+                alertBanner.innerHTML = `
+                    <div class="warning-alert-icon" style="width:24px; height:24px; flex-shrink:0;">${iconSvg}</div>
+                    <div class="warning-alert-text" style="font-weight:600; font-size:14px; line-height: 1.5; text-align: left;">${renderContentHtml}</div>
+                `;
+
+                warningContainer.appendChild(alertBanner);
+            });
+            warningContainer.style.display = "block";
+        }
     }
 }
 
@@ -291,15 +265,11 @@ function processForecastState(data) {
     const container = document.getElementById('forecast-container');
     if (!container) return;
     container.innerHTML = '';
-
-    if (!data.weatherForecast) return;
-
-    data.weatherForecast.slice(0, 5).forEach(day => {
-        const rawDate = day.forecastDate; 
-        const month = parseInt(rawDate.substring(4, 6), 10);
-        const dateNum = parseInt(rawDate.substring(6, 8), 10);
+    
+    data.weatherForecast?.slice(0, 5).forEach(day => {
+        const displayDateRaw = day.forecastDate ?? "";
+        const displayDate = `${parseInt(displayDateRaw.substring(4, 6), 10)}/${parseInt(displayDateRaw.substring(6, 8), 10)}`;
         
-        const displayDate = currentLang === 'en' ? `${month}/${dateNum}` : `${month}月${dateNum}日`;
         let displayDayName = day.week ?? "";
         if (currentLang === 'en') displayDayName = displayDayName.substring(0, 3);
 
@@ -315,10 +285,11 @@ function processForecastState(data) {
 
         const forecastCard = document.createElement('div');
         forecastCard.className = 'forecast-card';
+        // Added margin-bottom: 4px to the SVG wrapper container below
         forecastCard.innerHTML = `
             <div class="forecast-date">${displayDate}</div>
             <div class="forecast-day">${displayDayName}</div>
-            <div style="width:40px;height:40px;margin:8px auto;">${getWeatherIcon(forecastIconId)}</div>
+            <div style="width:40px; height:40px; margin:8px auto 15px auto;">${getWeatherIcon(forecastIconId)}</div>
             <div class="forecast-desc">${briefForecastText}</div>
             <div class="forecast-temp">${minTemp}°-${maxTemp}°C</div>
             <div class="forecast-rh">RH: ${minRh}-${maxRh}%</div>
@@ -328,7 +299,34 @@ function processForecastState(data) {
     });
 }
 
-// Initial setup triggers
+async function liveSyncWeatherEngine() {
+    const syncLabel = document.getElementById('sync-time');
+    try {
+        const [curr, flw, fnd, warn] = await Promise.all([
+            fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=${currentLang}`),
+            fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=flw&lang=${currentLang}`),
+            fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=${currentLang}`),
+            fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warningInfo&lang=${currentLang}`)
+        ]);
+        
+        const [currData, flwData, fndData, warnData] = await Promise.all([
+            curr.json(), 
+            flw.json(), 
+            fnd.json(), 
+            warn.json()
+        ]);
+        
+        currData.extractedWind = flwData.forecastWind;
+        processCurrentState(currData, fndData, warnData);
+        processForecastState(fndData);
+        
+        syncLabel.textContent = `${staticDictionary[currentLang].syncSuccess}${new Date().toLocaleTimeString(currentLang === 'en' ? 'en-US' : 'zh-HK', { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true })}`;
+    } catch (e) {
+        console.warn("Live feed offline, using mock.");
+    }
+}
+
+// Initial application bootstrap
 evaluateSolarSystemTheme();
 translateStaticInterface(currentLang);
 liveSyncWeatherEngine();

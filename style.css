@@ -256,7 +256,7 @@ input:checked + .slider:before {
     align-items: center;
     gap: 10px;
     color: var(--text-muted);
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 6px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -517,4 +517,66 @@ input:checked + .slider:before {
         text-align: center;
         font-size: 12px;
     }
+}
+/* ==========================================================
+   Weather Warning Banner Styling (Added for Eye-Catching Alerts)
+   ========================================================== */
+.warning-alert-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(217, 56, 58, 0.1); /* Subtle fallback red blend tint */
+    border-left: 5px solid var(--warning-red);
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-top: 14px;
+    margin-bottom: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    animation: pulseBorder 2.5s infinite ease-in-out, fadeInSlide 0.3s ease-out;
+}
+
+/* Dynamic color modifiers based on warning type */
+.warning-alert-banner.hot {
+    background: rgba(230, 92, 0, 0.1);
+    border-left-color: #ff6b1a;
+}
+.warning-alert-banner.cold {
+    background: rgba(0, 102, 204, 0.1);
+    border-left-color: #0066cc;
+}
+.warning-alert-banner.rain {
+    background: rgba(43, 43, 43, 0.15);
+    border-left-color: #34495e;
+}
+.warning-alert-banner.typhoon {
+    background: rgba(142, 68, 173, 0.1);
+    border-left-color: #9b59b6;
+}
+
+.warning-alert-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.warning-alert-text {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-main);
+    line-height: 1.3;
+}
+
+@keyframes pulseBorder {
+    0% { box-shadow: 0 0 0 0px rgba(217, 56, 58, 0.2); }
+    50% { box-shadow: 0 0 0 6px rgba(217, 56, 58, 0.0); }
+    100% { box-shadow: 0 0 0 0px rgba(217, 56, 58, 0); }
+}
+
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
 }
