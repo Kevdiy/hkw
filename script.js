@@ -3,7 +3,7 @@ const SVG_LIBRARY = {
     moon: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"></path><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"></path></svg>`,
     cloudy: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#CCD6DD" d="M27 8a6.98 6.98 0 0 0-2.015.298c.005-.1.015-.197.015-.298a5.998 5.998 0 0 0-11.785-1.573A5.998 5.998 0 0 0 11 6a6 6 0 1 0 0 12a5.998 5.998 0 0 0 5.785-4.428A5.975 5.975 0 0 0 19 14c.375 0 .74-.039 1.096-.104c-.058.36-.096.727-.096 1.104c0 3.865 3.135 7 7 7s7-3.135 7-7a7 7 0 0 0-7-7z"></path><path fill="#E1E8ED" d="M31 22c-.467 0-.91.085-1.339.204c.216-.526.339-1.1.339-1.704a4.5 4.5 0 0 0-4.5-4.5a4.459 4.459 0 0 0-2.701.921A6.497 6.497 0 0 0 16.5 12a6.497 6.497 0 0 0-6.131 4.357A8 8 0 1 0 8 32h23c2.762 0 5-2.238 5-5s-2.238-5-5-5z"></path></svg>`,
     partlyCloudy: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M14 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm16 12s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 14s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm3.872-7.957s1.414 1.414 0 2.828s-2.828 0-2.828 0L3.629 7.458s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm19.085 2.828s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414z"></path><circle fill="#FFAC33" cx="16" cy="16" r="9"></circle><path fill="#E1E8ED" d="M28 20c-.825 0-1.62.125-2.369.357A6.498 6.498 0 0 0 19.5 16c-3.044 0-5.592 2.096-6.299 4.921A4.459 4.459 0 0 0 10.5 20A4.5 4.5 0 0 0 6 24.5c0 .604.123 1.178.339 1.704A4.98 4.98 0 0 0 5 26c-2.762 0-5 2.238-5 5s2.238 5 5 5h23a8 8 0 1 0 0-16z"></path></svg>`,
-    shower1: `<svg width="800" height="800" viewBox="0 0 36 36"><path style="stroke:#fff;stroke-opacity:0;fill:#ffac33" d="M13 2s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2zM4 13s2 0 2 2-2 2-2 2H2s-2 0-2-2 2-2 2-2zm3.872-6.957s1.414 1.414 0 2.828-2.828 0-2.828 0L3.629 7.458s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0zm17.085 2.828s-1.414 1.414-2.828 0 0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0 0 2.828 0 2.828z"/><circle style="stroke:#fff;stroke-opacity:0;fill:#ffac33" cx="15.1" cy="15" r="8"/><path style="stroke:#fff;stroke-opacity:0;fill:#ffac33;fill-rule:evenodd" d="M3.537 25.36c1.414 1.414 2.828 0 2.828 0l1.414-1.414s1.414-1.414 0-2.828-2.828 0-2.828 0l-1.414 1.414s-1.414 1.414 0 2.828Zm26.288-10.535c0-2-2-2-2-2h-2s-2 0-2 2 2 2 2 2h2s2 0 2-2Z"/><path style="stroke:#fff;stroke-opacity:0;fill:#e1e8ed" d="M29.135 16.112a7 7 0 0 0-2.05.303c-.768-2.144-2.85-3.685-5.305-3.685-2.633 0-4.838 1.772-5.449 4.16a3.9 3.9 0 0 0-2.337-.778c-2.15 0-3.893 1.703-3.893 3.804 0 .51.107.996.293 1.44a4.4 4.4 0 0 0-1.159-.172c-2.39 0-4.325 1.892-4.325 4.227s1.936 4.227 4.325 4.227h19.899c3.823 0 6.921-3.027 6.921-6.763s-3.098-6.763-6.92-6.763Z"/><path style="stroke:#fff;stroke-opacity:0;fill:#5dadec" d="m14.784 33.675-.085-2.594-2.175 1.295c-.5.268-.805.797-.786 1.364.033.84.733 1.5 1.574 1.481a1.497 1.497 0 0 0 1.472-1.546Zm-5.29-1.167-.087-2.594-2.176 1.295c-.5.268-.805.796-.785 1.364 a1.54 1.54 0 0 0 1.574 1.48 1.497 1.497 0 0 0 1.473-1.545Zm10.613.409-.085-2.594-2.175 1.295c-.5.268-.805.797-.786 1.364.033.84.733 1.5 1.574 1.48a1.496 1.496 0 0 0 1.472-1.545Zm4.533.758-.086-2.594-2.175 1.295c-.5.268-.805.797-.785 1.364.033.84.733 1.5 1.574 1.481a1.496 1.496 0 0 0 1.472-1.546Zm4.565-1.167-.087-2.594-2.175 1.295c-.5.268-.805.797-.785 1.364.033.84.733 1.5 1.574 1.48a1.497 1.497 0 0 0 1.473-1.545Z"/></svg>`,
+    shower1: `<svg width="800" height="800" viewBox="0 0 36 36"><path style="stroke:#fff;stroke-opacity:0;fill:#ffac33" d="M13 2s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2zM4 13s2 0 2 2-2 2-2 2H2s-2 0-2-2s2-2 2-2zm3.872-6.957s1.414 1.414 0 2.828-2.828 0-2.828 0L3.629 7.458s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0zm17.085 2.828s-1.414 1.414-2.828 0 0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0 0 2.828 0 2.828z"/><circle style="stroke:#fff;stroke-opacity:0;fill:#ffac33" cx="15.1" cy="15" r="8"/><path style="stroke:#fff;stroke-opacity:0;fill:#ffac33;fill-rule:evenodd" d="M3.537 25.36c1.414 1.414 2.828 0 2.828 0l1.414-1.414s1.414-1.414 0-2.828-2.828 0-2.828 0l-1.414 1.414s-1.414 1.414 0 2.828Zm26.288-10.535c0-2-2-2-2-2h-2s-2 0-2 2 2 2 2 2h2s2 0 2-2Z"/><path style="stroke:#fff;stroke-opacity:0;fill:#e1e8ed" d="M29.135 16.112a7 7 0 0 0-2.05.303c-.768-2.144-2.85-3.685-5.305-3.685-2.633 0-4.838 1.772-5.449 4.16a3.9 3.9 0 0 0-2.337-.778c-2.15 0-3.893 1.703-3.893 3.804 0 .51.107.996.293 1.44a4.4 4.4 0 0 0-1.159-.172c-2.39 0-4.325 1.892-4.325 4.227s1.936 4.227 4.325 4.227h19.899c3.823 0 6.921-3.027 6.921-6.763s-3.098-6.763-6.92-6.763Z"/><path style="stroke:#fff;stroke-opacity:0;fill:#5dadec" d="m14.784 33.675-.085-2.594-2.175 1.295c-.5.268-.805.797-.786 1.364.033.84.733 1.5 1.574 1.481a1.497 1.497 0 0 0 1.472-1.546Zm-5.29-1.167-.087-2.594-2.176 1.295c-.5.268-.805.796-.785 1.364 a1.54 1.54 0 0 0 1.574 1.48 1.497 1.497 0 0 0 1.473-1.545Zm10.613.409-.085-2.594-2.175 1.295c-.5.268-.805.797-.786 1.364.033.84.733 1.5 1.574 1.48a1.496 1.496 0 0 0 1.472-1.545Zm4.533.758-.086-2.594-2.175 1.295c-.5.268-.805.797-.785 1.364.033.84.733 1.5 1.574 1.481a1.496 1.496 0 0 0 1.472-1.546Zm4.565-1.167-.087-2.594-2.175 1.295c-.5.268-.805.797-.785 1.364.033.84.733 1.5 1.574 1.48a1.497 1.497 0 0 0 1.473-1.545Z"/></svg>`,
     rain: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#E1E8ED" d="M28 4c-.825 0-1.62.125-2.369.357A6.498 6.498 0 0 0 19.5 0c-3.044 0-5.592 2.096-6.299 4.921A4.459 4.459 0 0 0 10.5 4A4.5 4.5 0 0 0 6 8.5c0 .604.123 1.178.339 1.704A4.98 4.98 0 0 0 5 10c-2.762 0-5 2.238-5 5s2.238 5 5 5h23a8 8 0 1 0 0-16z"></path><path fill="#5DADEC" d="M11.999 24.961l-.113-3.421l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799A2.033 2.033 0 0 0 10.056 27a1.975 1.975 0 0 0 1.943-2.039zm-1.979 7.46L9.907 29l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799a2.033 2.033 0 0 0 2.076 1.953a1.974 1.974 0 0 0 1.943-2.039zm-5-4.46l-.113-3.421l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799A2.034 2.034 0 0 0 3.077 30a1.974 1.974 0 0 0 1.943-2.039zm18-3l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 21.078 27a1.974 1.974 0 0 0 1.942-2.039zm-6.021 4l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 15.057 31a1.974 1.974 0 0 0 1.942-2.039zm5.021 4.46L21.906 30l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799a2.033 2.033 0 0 0 2.076 1.953a1.974 1.974 0 0 0 1.943-2.039zm6.979-5.46l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 27.057 30a1.974 1.974 0 0 0 1.942-2.039z"></path></svg>`,
     thunderstorm: `<svg width="800px" height="800px" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#F4900C" d="M13.917 36a.417.417 0 0 1-.371-.607L17 29h-5.078c-.174 0-.438-.031-.562-.297c-.114-.243-.057-.474.047-.703L15 19c.078-.067 6.902.393 7 .393a.417.417 0 0 1 .369.608l-3.817 6h5.032c.174 0 .329.108.391.271a.418.418 0 0 1-.119.461l-9.666 9.166a.422.422 0 0 1-.273.101z"></path><path fill="#E1E8ED" d="M28 4c-.825 0-1.62.125-2.369.357A6.498 6.498 0 0 0 19.5 0c-3.044 0-5.592 2.096-6.299 4.921A4.459 4.459 0 0 0 10.5 4A4.5 4.5 0 0 0 6 8.5c0 .604.123 1.178.339 1.704A4.98 4.98 0 0 0 5 10c-2.762 0-5 2.238-5 5s2.238 5 5 5h23a8 8 0 1 0 0-16z"></path><path fill="#5DADEC" d="M10.999 24.961l-.113-3.421l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799A2.034 2.034 0 0 0 9.056 27a1.975 1.975 0 0 0 1.943-2.039zm-2 8l-.113-3.421l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799A2.034 2.034 0 0 0 7.056 35a1.974 1.974 0 0 0 1.943-2.039zm-4.979-5.54L3.907 24l-2.87 1.708a1.966 1.966 0 0 0-1.036 1.799a2.033 2.033 0 0 0 2.076 1.953a1.974 1.974 0 0 0 1.943-2.039zm25-2.46l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 27.078 27a1.974 1.974 0 0 0 1.942-2.039zm-2 9l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 25.078 36a1.974 1.974 0 0 0 1.942-2.039zm6-4l-.113-3.421l-2.869 1.708a1.964 1.964 0 0 0-1.036 1.799A2.033 2.033 0 0 0 31.078 32a1.974 1.974 0 0 0 1.942-2.039z"></path></svg>`,
     windy: `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 495 495" style="enable-background:new 0 0 495 495;" xml:space="preserve"><path style="fill:#CCD6DD;" d="M195,135c0-24.8,20.2-45,45-45s45,20.2,45,45s-20.2,45-45,45H15c-8.3,0-15-6.7-15-15s6.7-15,15-15h225c8.3,0,15-6.7,15-15s-6.7-15-15-15s-15,6.7-15,15v15"/><path style="fill:#CCD6DD;" d="M375,255c0-24.8,20.2-45,45-45s45,20.2,45,45s-20.2,45-45,45H15c-8.3,0-15-6.7-15-15s6.7-15,15-15h405c8.3,0,15-6.7,15-15s-6.7-15-15-15s-15,6.7-15,15v15"/><path style="fill:#CCD6DD;" d="M255,345c0-16.5,13.5-30,30-30s30,13.5,30,30s-13.5,30-30,30H15c-8.3,0-15-6.7-15-15s6.7-15,15-15h270c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0c8.3,0,15-6.7,15-15s-6.7-15-15-15s-15,6.7-15,15v15"/></svg>`,
@@ -42,7 +42,7 @@ const staticDictionary = {
         syncSuccess: "Updated at: ",
         toggleText: "繁中",
         forecastTitle: "5-Days Weather Forecast",
-        rangePrefix: "Today's Range: "
+        rangePrefix: ""
     },
     tc: {
         title: "香港天氣總覽",
@@ -53,7 +53,7 @@ const staticDictionary = {
         syncSuccess: "更新時間: ",
         toggleText: "English",
         forecastTitle: "五天天氣預報",
-        rangePrefix: "今日氣溫變化: "
+        rangePrefix: ""
     }
 };
 
@@ -162,7 +162,12 @@ document.getElementById('lang-toggle').addEventListener('click', () => {
 
 function parseWindString(str) {
     if (!str) return { narrative: "--" };
-    return { narrative: str.replace(/\.$/, '').trim() };
+    
+    // Trim spaces/dots, convert everything to lowercase, then capitalize the very first letter.
+    let cleaned = str.replace(/\.$/, '').trim().toLowerCase();
+    let normalized = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+    
+    return { narrative: normalized };
 }
 
 function processCurrentState(currentData, forecastData, warningPayload) {
@@ -204,58 +209,70 @@ function processCurrentState(currentData, forecastData, warningPayload) {
         windElement.innerHTML = `<span style="font-weight: 600; color: var(--text-main);">${parseWindString(rawWindString).narrative}</span>`;
     }
 
-    // WARNING LAYER PARSING ENGINE
+    // UPDATED WARNSUM PARSING ENGINE
     const warningContainer = document.getElementById('warning-insertion-point');
     if (warningContainer) {
         warningContainer.innerHTML = "";
         warningContainer.style.display = "none";
 
-        if (warningPayload && warningPayload.details && warningPayload.details.length > 0) {
-            warningPayload.details.forEach(item => {
-                const code = item.warningCode || "";
-                if (!item.contents || item.contents.length === 0) return;
+        let alertCount = 0;
 
-                let strokeClass = "default";
-                let iconSvg = WARNING_SVGS.DEFAULT;
+        if (warningPayload) {
+            // Group 1: Display "name" only
+            const nameOnlyHeaders = ["WFROST", "WHOT", "WCOLD", "WFNTSA", "WMSGNL", "WL", "WTMW", "WTS"];
+            // Group 2: Display "name" and "type"
+            const nameAndTypeHeaders = ["WRAIN", "WTCSGNL", "WFIRE"];
 
-                if (code.includes("WHOT")) {
-                    strokeClass = "hot";
-                    iconSvg = WARNING_SVGS.WHOT;
-                } else if (code.includes("WCOLD")) {
-                    strokeClass = "cold";
-                    iconSvg = WARNING_SVGS.WCOLD;
-                } else if (code.includes("WRAINA") || code.includes("WRAINR") || code.includes("WRAINB") || code.includes("WTS")) {
-                    strokeClass = "rain";
-                    iconSvg = WARNING_SVGS.RAIN_STORM;
-                } else if (code.includes("WTC")) {
-                    strokeClass = "typhoon";
-                    iconSvg = WARNING_SVGS.TYPHOON;
+            const allHeaders = [...nameOnlyHeaders, ...nameAndTypeHeaders];
+
+            allHeaders.forEach(header => {
+                if (warningPayload[header]) {
+                    const item = warningPayload[header];
+                    let strokeClass = "default";
+                    let iconSvg = WARNING_SVGS.DEFAULT;
+
+                    // Match matching color style blocks to code categories
+                    if (header === "WHOT") {
+                        strokeClass = "hot";
+                        iconSvg = WARNING_SVGS.WHOT;
+                    } else if (header === "WCOLD") {
+                        strokeClass = "cold";
+                        iconSvg = WARNING_SVGS.WCOLD;
+                    } else if (header === "WRAIN" || header === "WTS") {
+                        strokeClass = "rain";
+                        iconSvg = WARNING_SVGS.RAIN_STORM;
+                    } else if (header === "WTCSGNL") {
+                        strokeClass = "typhoon";
+                        iconSvg = WARNING_SVGS.TYPHOON;
+                    }
+
+                    let renderContentHtml = "";
+                    const name = item.name || "";
+
+                    if (nameOnlyHeaders.includes(header)) {
+                        renderContentHtml = name;
+                    } else if (nameAndTypeHeaders.includes(header)) {
+                        const type = item.type || "";
+                        renderContentHtml = type ? `${name} - ${type}` : name;
+                    }
+
+                    if (renderContentHtml) {
+                        alertCount++;
+                        const alertBanner = document.createElement('div');
+                        alertBanner.className = `warning-alert-banner ${strokeClass}`;
+                        alertBanner.style.cssText = "display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; margin-top: 14px; border-radius: 6px; width: 100%; box-sizing: border-box;";
+
+                        alertBanner.innerHTML = `
+                            <div class="warning-alert-icon" style="width:24px; height:24px; flex-shrink:0;">${iconSvg}</div>
+                            <div class="warning-alert-text" style="font-weight:600; font-size:14px; line-height: 1.5; text-align: left;">${renderContentHtml}</div>
+                        `;
+                        warningContainer.appendChild(alertBanner);
+                    }
                 }
-
-                const alertBanner = document.createElement('div');
-                alertBanner.className = `warning-alert-banner ${strokeClass}`;
-                alertBanner.style.cssText = "display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; margin-top: 14px; border-radius: 6px; width: 100%; box-sizing: border-box;";
-                
-                let renderContentHtml = "";
-                const absoluteHeader = item.contents[0] || "";
-
-                // Safer detection: Check if the text header itself specifies the Tropical Cyclone warning
-                if (code.includes("WTC") || absoluteHeader.includes("Tropical Cyclone") || absoluteHeader.includes("熱帶氣旋")) {
-                    // Extract exactly the first 3 lines and stitch them with line breaks
-                    const lineSlice = item.contents.slice(0, 3);
-                    renderContentHtml = lineSlice.join('<br>');
-                } else {
-                    // General Warning codes (Thunderstorm, etc.): Keep only the first complete sentence/line
-                    renderContentHtml = absoluteHeader;
-                }
-
-                alertBanner.innerHTML = `
-                    <div class="warning-alert-icon" style="width:24px; height:24px; flex-shrink:0;">${iconSvg}</div>
-                    <div class="warning-alert-text" style="font-weight:600; font-size:14px; line-height: 1.5; text-align: left;">${renderContentHtml}</div>
-                `;
-
-                warningContainer.appendChild(alertBanner);
             });
+        }
+
+        if (alertCount > 0) {
             warningContainer.style.display = "block";
         }
     }
@@ -285,7 +302,6 @@ function processForecastState(data) {
 
         const forecastCard = document.createElement('div');
         forecastCard.className = 'forecast-card';
-        // Added margin-bottom: 4px to the SVG wrapper container below
         forecastCard.innerHTML = `
             <div class="forecast-date">${displayDate}</div>
             <div class="forecast-day">${displayDayName}</div>
@@ -306,7 +322,7 @@ async function liveSyncWeatherEngine() {
             fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=${currentLang}`),
             fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=flw&lang=${currentLang}`),
             fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=${currentLang}`),
-            fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warningInfo&lang=${currentLang}`)
+            fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warnsum&lang=${currentLang}`)
         ]);
         
         const [currData, flwData, fndData, warnData] = await Promise.all([
@@ -330,4 +346,4 @@ async function liveSyncWeatherEngine() {
 evaluateSolarSystemTheme();
 translateStaticInterface(currentLang);
 liveSyncWeatherEngine();
-setInterval(liveSyncWeatherEngine, 60000);
+//setInterval(liveSyncWeatherEngine, 60000);
